@@ -1,0 +1,39 @@
+{
+  "name": "presentation-css",
+  "version": "2.0.0",
+  "description": "The Augmented.js Next - Presentation CSS Module.",
+  "main": "src/styles/material-generic.css",
+  "scripts": {
+    "dev": "webpack --mode development --module-bind js=babel-loader --progress",
+    "build": "webpack --mode production --module-bind js=babel-loader --progress",
+    "clean": "rm -rf node_modules",
+    "reinstall": "npm run clean && npm install",
+    "rebuild": "npm run clean && npm install && npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Augmentedjs/presentation-css.git"
+  },
+  "keywords": [
+    "augmentedjs",
+    "presentation"
+  ],
+  "author": "Bob Warren <jedi.master@augmentedjs.com> (http://www.augmentedjs.com)",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-plugin-transform-regenerator": "^6.26.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.7.0",
+    "uglifyjs-webpack-plugin": "^1.2.7",
+    "webpack": "^4.16.5",
+    "webpack-cli": "^2.1.5"
+  },
+  "dependencies": {
+  },
+  "bugs": {
+    "url": "https://github.com/Augmentedjs/presentation-css/issues"
+  },
+  "homepage": "http://www.augmentedjs.com"
+}
