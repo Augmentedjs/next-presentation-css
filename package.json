@@ -3,8 +3,7 @@
   "version": "2.2.0",
   "description": "The Augmented.js Next - Presentation CSS Module.",
   "main": "src/styles/material-generic.css",
-  "scripts": {
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Augmentedjs/presentation-css.git"
@@ -15,10 +14,8 @@
   ],
   "author": "Bob Warren <jedi.master@augmentedjs.com> (http://www.augmentedjs.com)",
   "license": "Apache-2.0",
-  "devDependencies": {
-  },
-  "dependencies": {
-  },
+  "devDependencies": {},
+  "dependencies": {},
   "bugs": {
     "url": "https://github.com/Augmentedjs/presentation-css/issues"
   },

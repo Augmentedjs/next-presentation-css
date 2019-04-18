@@ -23,12 +23,10 @@ body {
   margin: 0;
   padding: 0;
   font-size: 100%;
-  /* See: http://www.informationarchitects.jp/en/100e2r/ */
   line-height: 1.5;
-  /* Default value, `normal`, depends on the font */
   font-family: "Roboto", "Arial Nue", "Arial", "Verdana", "Helvetica", sans-serif;
   font-weight: 300;
-  color: rgba(0, 0, 0, 0.85);
+  color: var(--dark-text);
   background-color: rgb(250, 250, 250);
 }
 
@@ -69,7 +67,7 @@ h4 {
 ul, ol {
   margin: 1em 0;
   /* Default for all browsers except IE */
-  padding-left: 40px;
+  padding-left: 1.25rem;
   /* IE has a 40px margin-left instead */
 }
 
@@ -78,7 +76,7 @@ p {
 }
 
 blockquote {
-  margin: 1em 40px;
+  margin: 1em 2.5rem;
   /* Same for all browsers - Customize or remove */
 }
 
@@ -103,16 +101,6 @@ a {
     border: none;
   }
 }
-
-/*a:link {color: #0000EE;}
-a:visited {color: #551A8B;}
-a:active {color: #EE0000;}*/
-
-/* Add your own styles for hover _and_ focus styles */
-
-/* Remove dotted outline clicked links - Keeps outline on focus */
-
-/* No border around images in links */
 
 /* MISC TEXT-LEVEL ELEMENTS */
 
