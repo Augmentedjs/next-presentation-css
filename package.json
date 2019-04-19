@@ -1,8 +1,8 @@
 {
   "name": "presentation-css",
-  "version": "2.2.1",
+  "version": "3.0.0",
   "description": "The Augmented.js Next - Presentation CSS Module.",
-  "main": "src/styles/material-generic.css",
+  "main": "src/styles/material-generic.scss",
   "scripts": {},
   "repository": {
     "type": "git",
