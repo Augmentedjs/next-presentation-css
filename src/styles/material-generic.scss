@@ -1,7 +1,7 @@
 @import "./reset.scss";
 @import "./hamburger.scss";
 @import "./atariscroll.scss";
-@import "../table.scss";
+@import "./table.scss";
 
 .material-icons {
   font-family: 'Material Icons';
@@ -138,6 +138,12 @@ textarea:focus, input:focus, code:focus {
 }
 
 textarea {
+  background-color: transparent;
+
+  &.short {
+    height: 6.25rem;
+  }
+
   &:invalid, &.bad {
     border-bottom: 0.125rem solid #f44336;
     padding-bottom: 0;
@@ -153,29 +159,19 @@ code.bad, input:invalid {
   box-shadow: none;
 }
 
-textarea.short {
-  height: 6.25rem;
-}
 
 input.full, textarea.full {
   width: 100%;
 }
 
 input {
-  &[type="text"], &[type="password"] {
+  &[type="text"], &[type="password"], &[type="email"] {
     background-color: transparent;
   }
-}
-
-textarea {
-  background-color: transparent;
 }
 
 input {
-  &[type=email] {
-    background-color: transparent;
-  }
-  &[type=checkbox] {
+  &[type="checkbox"] {
     margin: 0;
   }
 }
@@ -194,7 +190,7 @@ progress {
   margin-right: auto;
 }
 
-em.underline {
+.underline {
   text-decoration: underline;
   font-style: normal;
 }
@@ -288,6 +284,16 @@ button {
     text-align: center;
     vertical-align: text-top;
     width: 2.25rem;
+
+    &.hover {
+      position: fixed;
+    }
+    &.bottom {
+      bottom: 2rem;
+    }
+    &.right {
+      right: 2rem;
+    }
   }
 }
 
@@ -323,22 +329,10 @@ button::before, .tools i::before {
   transform: translate(-50%, -50%);
 }
 
-button:active:before, .tools i:active::before {
+button:active::before, .tools i:active::before {
   width: 120%;
   padding-top: 120%;
   transition: width .2s ease-out, padding-top .2s ease-out;
-}
-
-button.round {
-  &.hover {
-    position: fixed;
-  }
-  &.bottom {
-    bottom: 2rem;
-  }
-  &.right {
-    right: 2rem;
-  }
 }
 
 dialog {
@@ -411,15 +405,15 @@ dialog {
     font-size: 1rem;
     font-weight: 400;
     margin-top: 0.5rem;
-    &[type=text], &[type=file] {
+    &[type="text"], &[type="file"] {
       width: 99%;
     }
-    &[type=checkbox] {
+    &[type="checkbox"] {
       display: block;
       float: left;
     }
   }
-  div.group {
+  .group {
     line-height: 1em;
     label {
       display: inline-block;
@@ -660,13 +654,10 @@ header.header nav.menu ul {
   margin-right: 1rem;
   border-right: 1px solid #eeeeee;
   margin-bottom: 0;
+  padding: 1rem 0;
   header {
     margin-left: 1rem;
   }
-  display: block;
-  position: relative;
-  padding: 1rem 0;
-  width: 12.5rem;
   ul {
     list-style: outside none none;
     margin: 0;
@@ -684,15 +675,16 @@ header.header nav.menu ul {
       &.current {
         background-color: #bbdefb;
         color: #3b78e7;
+
+        i {
+          color: #3b78e7;
+        }
       }
       i {
         font-size: 0.875rem;
         line-height: 1.125rem;
         padding-right: 1rem;
         vertical-align: text-bottom;
-      }
-      &.current i {
-        color: #3b78e7;
       }
     }
   }
@@ -869,7 +861,6 @@ header.header nav.menu ul {
   margin: 1 0.25rem !important;
   position: relative;
   text-align: center;
-  vertical-align: middle;
   width: 3rem;
   &.large {
     width: 6rem;
@@ -910,7 +901,7 @@ header.header nav.menu ul {
 .box {
   background-color: white;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  box-shadow: 0 0.125rem  0.25rem rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
   margin-bottom: 0.5rem;
 }
 
@@ -926,7 +917,7 @@ header.header nav.menu ul {
   display: block;
   border: 1px solid #cfd8dc;
   border-radius: 0.125rem;
-  box-shadow: 1px 1px  0.25rem rgba(0, 0, 0, 0.2);
+  box-shadow: 1px 1px 0.25rem rgba(0, 0, 0, 0.2);
   background-color: #FAFAFA;
 }
 
