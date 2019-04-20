@@ -2,6 +2,7 @@
 @import "./hamburger.scss";
 @import "./atariscroll.scss";
 @import "./table.scss";
+@import "./dialog.scss";
 
 .material-icons {
   font-family: 'Material Icons';
@@ -21,7 +22,7 @@
   /* Support for Safari and Chrome. */
   text-rendering: optimizeLegibility;
   /* Support for Firefox. */
-  -moz-osx-font-smoothing: grayscale;
+  /* -moz-osx-font-smoothing: grayscale; Don't like this trend */
   /* Support for IE. */
   font-feature-settings: 'liga';
   &.md-18 {
@@ -335,111 +336,7 @@ button:active::before, .tools i:active::before {
   transition: width .2s ease-out, padding-top .2s ease-out;
 }
 
-dialog {
-  background-color: white;
-  border-radius: 0.25rem;
-  box-shadow: 0 1.125rem 2.5rem rgba(0, 0, 0, 0.3), 0 1 0.25rem 0.75rem rgba(0, 0, 0, 0.22);
-  display: block;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  padding: 1rem;
-  z-index: auto;
-  border: none;
-  &.alert {
-    height: 13 0.25rem;
-    margin-left: -11.5rem;
-    margin-top: -8.75rem;
-    width: 23rem;
-  }
-  &.form {
-    height: 10.5rem;
-    margin-left: -11.5rem;
-    margin-top: -8.75rem;
-    width: 23rem;
-  }
-  &.bigForm {
-    height: 18.75rem;
-    margin-left: -11.5rem;
-    margin-top: -8.75rem;
-    width: 23rem;
-  }
-  button {
-    background-color: transparent;
-    border: 0 none;
-    box-shadow: none;
-    color: #2196f3;
-    display: block;
-    float: right;
-    margin: 0;
-    padding: 0.5rem;
-    &:hover, &:active {
-      background-color: transparent;
-      border: 0 none;
-    }
-  }
-  div.buttonGroup {
-    bottom: 0.5rem;
-    display: block;
-    position: absolute;
-    right: 1rem;
-    text-align: right;
-    width: 100%;
-  }
-  h1 {
-    color: var(--dark-text);
-    font-size: 1.5rem;
-    font-weight: 400;
-    margin-bottom: 1.5rem;
-    margin-left: 0;
-    padding: 0;
-  }
-  h2, label {
-    font-size: 1rem;
-    font-weight: 400;
-    color: var(--dark-text);
-    margin-left: 0;
-    padding: 0;
-  }
-  input {
-    font-size: 1rem;
-    font-weight: 400;
-    margin-top: 0.5rem;
-    &[type="text"], &[type="file"] {
-      width: 99%;
-    }
-    &[type="checkbox"] {
-      display: block;
-      float: left;
-    }
-  }
-  .group {
-    line-height: 1em;
-    label {
-      display: inline-block;
-    }
-  }
-  &.embedded {
-    box-shadow: 0 0.125rem 0.125rem 0.125rem rgba(0, 0, 0, 0.1);
-    display: block;
-    position: relative;
-    top: auto;
-    left: 50%;
-    margin-top: auto;
-    margin-left: -11.5rem;
-  }
-}
 
-.blur {
-  display: block;
-  position: fixed;
-  z-index: auto;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.1);
-}
 
 p.center, h1.center, h2.center, h3.center, h4.center {
   text-align: center;
@@ -460,7 +357,7 @@ div.center, ul.center, ol.center {
 
 /* application header - top bar */
 
-header.header {
+.header {
   background-color: #3b78e7;
   border: 0 none;
   box-shadow: 0 0.25rem 0.25rem 0 rgba(0, 0, 0, 0.14), 0 0.25rem 0.25rem -0.125rem rgba(0, 0, 0, 0.2), 0 1px 0.5rem 0 rgba(0, 0, 0, 0.12);
@@ -551,7 +448,7 @@ header.header {
     text-align: center;
     width: 100%;
   }
-  nav.menu {
+  .menu {
     display: block;
     position: absolute;
     left: 0.65rem;
@@ -559,10 +456,26 @@ header.header {
     z-index: 3;
     background: rgba(0, 0, 0, 0);
     cursor: context-menu;
+
+    ul {
+      display: block;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      box-shadow: 0.125rem 0.25rem  0.25rem rgba(0, 0, 0, 0.1);
+      background-color: white;
+      z-index: 4;
+      margin: 0.25rem 1rem 0 0;
+      padding: 0;
+      list-style: none;
+      overflow: hidden;
+      visibility: hidden;
+      opacity: 0;
+      max-height: 1px;
+      transition: max-height 0.3s ease-out, visibility 0s linear 0.5s,opacity 0.5s linear;
+    }
   }
 }
 
-div.panel nav.menu {
+.panel .menu {
   display: block;
   position: absolute;
   left: 0.65rem;
@@ -570,39 +483,23 @@ div.panel nav.menu {
   z-index: 3;
   background: rgba(0, 0, 0, 0);
   cursor: context-menu;
-}
 
-header.header nav.menu ul {
-  display: block;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  box-shadow: 0.125rem 0.25rem  0.25rem rgba(0, 0, 0, 0.1);
-  background-color: white;
-  z-index: 4;
-  margin: 0.25rem 1rem 0 0;
-  padding: 0;
-  list-style: none;
-  overflow: hidden;
-  visibility: hidden;
-  opacity: 0;
-  max-height: 1px;
-  transition: max-height 0.3s ease-out, visibility 0s linear 0.5s,opacity 0.5s linear;
-}
-
-.panel .menu ul {
-  display: block;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  box-shadow: 0.125rem 0.25rem  0.25rem rgba(0, 0, 0, 0.1);
-  background-color: white;
-  z-index: 4;
-  margin: 0.25rem 1rem 0 0;
-  padding: 0;
-  list-style: none;
-  overflow: hidden;
-  visibility: hidden;
-  opacity: 0;
-  max-height: 1px;
-  transition: max-height 0.3s ease-out, visibility 0s linear 0.5s,opacity 0.5s linear;
-  margin: 0.25rem 0 0 1rem;
+  ul {
+    display: block;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0.125rem 0.25rem  0.25rem rgba(0, 0, 0, 0.1);
+    background-color: white;
+    z-index: 4;
+    margin: 0.25rem 1rem 0 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    visibility: hidden;
+    opacity: 0;
+    max-height: 1px;
+    transition: max-height 0.3s ease-out, visibility 0s linear 0.5s,opacity 0.5s linear;
+    margin: 0.25rem 0 0 1rem;
+  }
 }
 
 .header .menu:hover ul, .panel .menu:hover ul {
@@ -937,39 +834,7 @@ header.header nav.menu ul {
   background-color: var(--orange-500);
 }
 
-/* needs to move to the framework */
 
-.splash {
-  position: absolute;
-  left: calc(50% - 11.25rem);
-  top: calc(50% - 10rem);
-  width: 21.5rem;
-  height: 20rem;
-  text-align: center;
-  transition: opacity 3s ease;
-  background-color: white;
-  border: 1px solid #cfd8dc;
-  border-radius: 0.125rem;
-  box-shadow: 1px 1px  0.25rem rgba(0, 0, 0, 0.2);
-  z-index: 2;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-  figure.logo_large {
-    width: 8.75rem;
-    height: 8.75rem;
-    margin: 0;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  h1 {
-    font-weight: 700;
-    color: var(--secondary-color-dark);
-  }
-}
-
-.fade {
-  opacity: 0;
-}
 
 /* router transitions */
 
@@ -982,30 +847,5 @@ header.header nav.menu ul {
 }
 
 .transition-out {
-  opacity: 0;
-}
-
-.notify {
-  background-color: black;
-  border-radius: 0.5rem;
-  box-shadow: 0 1.125rem 2.5rem rgba(0, 0, 0, 0.3), 0 1 0.25rem 0.75rem rgba(0, 0, 0, 0.22);
-  display: block;
-  position: fixed;
-  top: 4rem;
-  right: 0;
-  padding: 1rem;
-  z-index: auto;
-  border: none;
-  width: 16rem;
-  height: 3rem;
-  backdrop-filter: blur(10px);
-  color: rgba(255, 255, 255, 0.85);
-  opacity: 0.85;
-  text-align: center;
-  transition: opacity 1.5s, transform 1.5s;
-}
-
-.slide {
-  transform: translateX(19rem);
   opacity: 0;
 }

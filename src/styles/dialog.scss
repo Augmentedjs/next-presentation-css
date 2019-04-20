@@ -1,0 +1,162 @@
+dialog {
+  background-color: white;
+  border-radius: 0.25rem;
+  box-shadow: 0 1.125rem 2.5rem rgba(0, 0, 0, 0.3), 0 1 0.25rem 0.75rem rgba(0, 0, 0, 0.22);
+  display: block;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  padding: 1rem;
+  z-index: auto;
+  border: none;
+  &.alert {
+    height: 13 0.25rem;
+    margin-left: -11.5rem;
+    margin-top: -8.75rem;
+    width: 23rem;
+  }
+  &.form {
+    height: 10.5rem;
+    margin-left: -11.5rem;
+    margin-top: -8.75rem;
+    width: 23rem;
+  }
+  &.bigForm {
+    height: 18.75rem;
+    margin-left: -11.5rem;
+    margin-top: -8.75rem;
+    width: 23rem;
+  }
+  button {
+    background-color: transparent;
+    border: 0 none;
+    box-shadow: none;
+    color: #2196f3;
+    display: block;
+    float: right;
+    margin: 0;
+    padding: 0.5rem;
+    &:hover, &:active {
+      background-color: transparent;
+      border: 0 none;
+    }
+  }
+  div.buttonGroup {
+    bottom: 0.5rem;
+    display: block;
+    position: absolute;
+    right: 1rem;
+    text-align: right;
+    width: 100%;
+  }
+  h1 {
+    color: var(--dark-text);
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+    margin-left: 0;
+    padding: 0;
+  }
+  h2, label {
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--dark-text);
+    margin-left: 0;
+    padding: 0;
+  }
+  input {
+    font-size: 1rem;
+    font-weight: 400;
+    margin-top: 0.5rem;
+    &[type="text"], &[type="file"] {
+      width: 99%;
+    }
+    &[type="checkbox"] {
+      display: block;
+      float: left;
+    }
+  }
+  .group {
+    line-height: 1em;
+    label {
+      display: inline-block;
+    }
+  }
+  &.embedded {
+    box-shadow: 0 0.125rem 0.125rem 0.125rem rgba(0, 0, 0, 0.1);
+    display: block;
+    position: relative;
+    top: auto;
+    left: 50%;
+    margin-top: auto;
+    margin-left: -11.5rem;
+  }
+}
+
+.blur {
+  display: block;
+  position: fixed;
+  z-index: auto;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.splash {
+  position: absolute;
+  left: calc(50% - 11.25rem);
+  top: calc(50% - 10rem);
+  width: 21.5rem;
+  height: 20rem;
+  text-align: center;
+  transition: opacity 3s ease;
+  background-color: white;
+  border: 1px solid #cfd8dc;
+  border-radius: 0.125rem;
+  box-shadow: 1px 1px  0.25rem rgba(0, 0, 0, 0.2);
+  z-index: 2;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  figure.logo_large {
+    width: 8.75rem;
+    height: 8.75rem;
+    margin: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  h1 {
+    font-weight: 700;
+    color: var(--secondary-color-dark);
+  }
+}
+
+.fade {
+  opacity: 0;
+}
+
+.notify {
+  background-color: black;
+  border-radius: 0.5rem;
+  box-shadow: 0 1.125rem 2.5rem rgba(0, 0, 0, 0.3), 0 1 0.25rem 0.75rem rgba(0, 0, 0, 0.22);
+  display: block;
+  position: fixed;
+  top: 4rem;
+  right: 0;
+  padding: 1rem;
+  z-index: auto;
+  border: none;
+  width: 16rem;
+  height: 3rem;
+  backdrop-filter: blur(10px);
+  color: rgba(255, 255, 255, 0.85);
+  opacity: 0.85;
+  text-align: center;
+  transition: opacity 1.5s, transform 1.5s;
+}
+
+.slide {
+  transform: translateX(19rem);
+  opacity: 0;
+}
