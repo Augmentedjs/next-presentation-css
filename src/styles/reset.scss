@@ -40,7 +40,7 @@ article, aside, figcaption, figure, footer, header, nav, section, main {
 /* PARAGRAPHS */
 
 h1, h2, h3, h4 {
-  margin: 1em 0 .5em;
+  margin: 1rem 0 .5rem;
   /* Titles should be close to the text they describe */
   line-height: 1.25;
   /* Bigger text is often nicer with smaller line height */
@@ -49,39 +49,39 @@ h1, h2, h3, h4 {
 }
 
 h1 {
-  font-size: 2em;
+  font-size: 2rem;
 }
 
 h2 {
-  font-size: 1.5em;
+  font-size: 1.5rem;
 }
 
 h3 {
-  font-size: 1.2em;
+  font-size: 1.2rem;
 }
 
 h4 {
-  font-size: 1em;
+  font-size: 1rem;
 }
 
 ul, ol {
-  margin: 1em 0;
+  margin: 1rem 0;
   /* Default for all browsers except IE */
   padding-left: 1.25rem;
   /* IE has a 40px margin-left instead */
 }
 
 p {
-  margin: 1em 0;
+  margin: 1rem 0;
 }
 
 blockquote {
-  margin: 1em 2.5rem;
+  margin: 1rem 2.5rem;
   /* Same for all browsers - Customize or remove */
 }
 
 figure {
-  margin: 2em 0;
+  margin: 2rem 0;
   /* Default in HTML5 spec: `1em 40px` */
 }
 
