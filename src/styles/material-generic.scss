@@ -1,8 +1,5 @@
 @import "./reset.scss";
-@import "./hamburger.scss";
 @import "./atariscroll.scss";
-@import "./table.scss";
-@import "./dialog.scss";
 
 .material-icons {
   font-family: 'Material Icons';
@@ -93,6 +90,8 @@ span {
     opacity: 0.85;
   }
 }
+
+@import "./hamburger.scss";
 
 h1 {
   font-weight: 400;
@@ -833,7 +832,8 @@ div.center, ul.center, ol.center {
   background-color: var(--orange-500);
 }
 
-
+@import "./table.scss";
+@import "./dialog.scss";
 
 /* router transitions */
 
