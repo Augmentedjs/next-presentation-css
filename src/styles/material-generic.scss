@@ -297,11 +297,28 @@ button {
   }
 }
 
-.toolbar {
+.tools {
   display: block;
   position: relative;
-  > .tools {
+  min-width: 1.5rem;
+  height: 1.5rem;
+  i {
     display: inline-block;
+    width: 1.5rem;
+    height: 1.5rem;
+    cursor: pointer;
+  }
+  ul {
+    list-style: none;
+    li {
+      i {
+        cursor: pointer;
+        height: 0.875rem;
+        line-height: 0.75rem;
+        padding-right: 0.5rem;
+        width: 1.125rem;
+      }
+    }
     &.spacer {
       width: 1px;
       border-left: 1px solid rgba(0, 0, 0, 0.1);
@@ -780,27 +797,6 @@ header.header nav.menu ul {
   }
   div {
     margin: 0 0 0.5rem;
-  }
-  .tools {
-    display: block;
-    position: absolute;
-    right: 0;
-    top: -0.25rem;
-    min-width: 1.5rem;
-    height: 1.5rem;
-    i {
-      display: inline-block;
-      width: 1.5rem;
-      height: 1.5rem;
-      cursor: pointer;
-    }
-    li i {
-      cursor: pointer;
-      height: 0.875rem;
-      line-height: 0.75rem;
-      padding-right: 0.5rem;
-      width: 1.125rem;
-    }
   }
   h1 {
     color: #43a047;
