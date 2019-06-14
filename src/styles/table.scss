@@ -96,6 +96,13 @@ table {
         text-overflow: ellipsis;
         text-align: right;
       }
+
+      &.sorted {
+        background-color: #eeeeee;
+        &::before {
+          content: "\21f5\00a0";
+        }
+      }
     }
     td {
       select {
@@ -144,6 +151,9 @@ table {
         input[type=checkbox] {
           width: 1rem;
         }
+      }
+      &.sorted {
+        background-color: #F5F5F5;
       }
     }
   }
