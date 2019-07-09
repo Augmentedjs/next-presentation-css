@@ -355,6 +355,18 @@ span.red {
   --green-500: #4CAF50;
   --black: black; }
 
+.blue {
+  background-color: var(--blue-500); }
+
+.purple {
+  background-color: var(--purple-500); }
+
+.red {
+  background-color: var(--red-500); }
+
+.orange {
+  background-color: var(--orange-500); }
+
 *[data-click] {
   cursor: pointer; }
 
@@ -362,12 +374,20 @@ body {
   /* Browsers have default 8px margins _or_ padding! */
   margin: 0;
   padding: 0;
-  font-size: 100%;
+  font-size: 16px;
   line-height: 1.5;
-  font-family: "Roboto", "Arial Nue", "Arial", "Verdana", "Helvetica", sans-serif;
+  font-family: "Roboto", "Arial Nue", "Arial", "Verdana", "Helvetica Neue", "Helvetica", sans-serif;
   font-weight: 300;
   color: var(--dark-text);
-  background-color: #fafafa; }
+  -webkit-touch-callout: none;
+  /* prevent callout to copy image, etc when tap to hold */
+  -webkit-text-size-adjust: none;
+  /* prevent webkit from resizing text to fit */
+  -webkit-user-select: text;
+  /* prevent copy paste, to allow, change "none" to "text" */
+  background-color: var(--background-color);
+  height: 100%;
+  width: 100%; }
 
 /* HTML5 blocks - needed in older browsers */
 article, aside, figcaption, figure, footer, header, nav, section, main, input, button, select {
@@ -390,7 +410,8 @@ h2 {
   font-size: 1.5rem; }
 
 h3 {
-  font-size: 1.2rem; }
+  font-size: 0.8rem;
+  font-weight: 400; }
 
 h4 {
   font-size: 1rem; }
@@ -415,7 +436,10 @@ figure {
 /* LINKS */
 /* Default browser styles (from Firefox, similar in most browsers) */
 a {
-  text-decoration: underline; }
+  text-decoration: underline;
+  color: var(--secondary-color); }
+  a:visited {
+    color: var(--secondary-color-dark); }
   a:hover, a:focus {
     /* ... */ }
   a:active, a:hover {
@@ -470,7 +494,7 @@ input, textarea, code {
   font-size: 0.65rem;
   font-weight: 300;
   border: none;
-  border-bottom: 1px solid #cfd8dc;
+  border-bottom: 1px solid var(--secondary-color);
   color: var(--dark-text);
   padding-bottom: 1px; }
 
@@ -483,7 +507,7 @@ textarea, code {
   resize: none; }
 
 textarea:focus, input:focus, code:focus {
-  border-bottom: 0.125rem solid #03a9f4;
+  border-bottom: 0.125rem solid var(--secondary-color-dark);
   padding-bottom: 0;
   outline: none; }
 
@@ -492,13 +516,13 @@ textarea {
   textarea.short {
     height: 6.25rem; }
   textarea:invalid, textarea.bad {
-    border-bottom: 0.125rem solid #f44336;
+    border-bottom: 0.125rem solid var(--red-500);
     padding-bottom: 0;
     outline: none;
     box-shadow: none; }
 
 code.bad, input:invalid {
-  border-bottom: 0.125rem solid #f44336;
+  border-bottom: 0.125rem solid var(--red-500);
   padding-bottom: 0;
   outline: none;
   box-shadow: none; }
@@ -507,10 +531,19 @@ input.full, textarea.full {
   width: 100%; }
 
 input[type="text"], input[type="password"], input[type="email"] {
-  background-color: transparent; }
+  background-color: transparent;
+  width: 9.5rem; }
 
 input[type="checkbox"] {
   margin: 0; }
+
+textarea, code {
+  border-bottom: 1px solid var(--secondary-color);
+  color: var(--dark-text); }
+
+input:focus, textarea:focus, code:focus {
+  border-bottom: 2px solid var(--secondary-color-dark);
+  color: var(--dark-text); }
 
 label {
   display: block;
@@ -540,6 +573,9 @@ strong {
   color: var(--dark-text); }
 
 button {
+  font-family: "Libre Franklin", "Helvetica Neue", "Roboto", sans-serif;
+  vertical-align: middle;
+  transition: background-color 0.2s, color 0.2s;
   background-color: white;
   border: 1px solid #cfd8dc;
   border-radius: 0.125rem;
@@ -555,18 +591,26 @@ button {
   text-transform: uppercase;
   cursor: pointer;
   overflow: hidden; }
+  button i.material-icons {
+    font-size: 1rem;
+    line-height: 1rem;
+    display: inline;
+    vertical-align: top; }
   button:hover {
-    background-color: #eceff1;
-    border: 1px solid #b0bec5; }
+    border-color: var(--secondary-color-dark);
+    background-color: var(--secondary-color);
+    color: var(--primary-color-dark); }
   button:active {
     background-color: #cfd8dc; }
-  button.primary, button.blue {
+  button.blue {
+    background-color: #2196f3; }
+  button.primary {
     border: 1px solid transparent;
-    background-color: #2196f3;
+    background-color: var(--primary-color);
     color: rgba(255, 255, 255, 0.85); }
-    button.primary:hover, button.blue:hover {
+    button.primary:hover {
       background-color: #1e88e5; }
-    button.primary:active, button.blue:active {
+    button.primary:active {
       background-color: #1976d2; }
   button.red {
     color: rgba(255, 255, 255, 0.85);
@@ -1260,13 +1304,14 @@ dialog {
     background-color: transparent;
     border: 0 none;
     box-shadow: none;
-    color: #2196f3;
     display: block;
     float: right;
     margin: 0;
-    padding: 0.5rem; }
+    padding: 0.5rem;
+    color: var(--primary-color); }
     dialog button:hover, dialog button:active {
       background-color: transparent;
+      color: var(--primary-color-dark);
       border: 0 none; }
   dialog div.buttonGroup {
     bottom: 0.5rem;
@@ -1371,6 +1416,12 @@ dialog {
   transform: translateX(19rem);
   opacity: 0; }
 
+.fade {
+  opacity: 0; }
+
+.content {
+  margin: auto 0.5rem; }
+
 /* router transitions */
 .main {
   transition: opacity 1s ease; }
@@ -1380,6 +1431,15 @@ dialog {
 
 .transition-out {
   opacity: 0; }
+
+/* notify */
+.slide {
+  transform: translateX(18.75rem);
+  opacity: 0; }
+
+.hide {
+  display: none;
+  visibility: hidden; }
 
 /* Progress Bar */
 .progress {
