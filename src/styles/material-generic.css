@@ -1098,13 +1098,6 @@ div.center, ul.center, ol.center {
   box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
   margin-bottom: 0.5rem; }
 
-.main h1 {
-  color: rgba(0, 0, 0, 0.1);
-  font-size: 4rem;
-  font-weight: 100;
-  margin-top: 23%;
-  text-align: center; }
-
 .card {
   display: block;
   border: 1px solid #cfd8dc;
