@@ -1,0 +1,201 @@
+button {
+  font-family: "Libre Franklin", "Helvetica Neue", "Roboto", sans-serif;
+  vertical-align: middle;
+  transition: background-color 0.2s, color 0.2s;
+
+  background-color: white;
+  border: 1px solid #cfd8dc;
+  border-radius: 0.125rem;
+  box-shadow: 1px 1px  0.25rem rgba(0, 0, 0, 0.2);
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 0.75rem;
+  font-weight: 400;
+  height: 2.25rem;
+  line-height: 0.5rem;
+  margin-left: 0.65rem;
+  margin-right: 0;
+  padding: 0.75rem 1rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  overflow: hidden;
+
+  i.material-icons {
+    font-size: 1rem;
+    line-height: 1rem;
+    display: inline;
+    vertical-align: top;
+  }
+  &:hover {
+    border-color: var(--secondary-color-dark);
+    background-color: var(--secondary-color);
+    color: var(--primary-color-dark);
+  }
+
+  &:active {
+    background-color: #cfd8dc;
+  }
+
+  &.blue {
+    background-color: #2196f3;
+  }
+
+  &.primary {
+    border: 1px solid transparent;
+    background-color: var(--primary-color);
+    color: rgba(255, 255, 255, 0.85);
+    &:hover {
+      background-color: #1e88e5;
+    }
+    &:active {
+      background-color: #1976d2;
+    }
+  }
+  &.red {
+    color: rgba(255, 255, 255, 0.85);
+    background-color: #f44336;
+    &:hover {
+      background-color: #e53935;
+    }
+    &:active {
+      background-color: #d32f2f;
+    }
+  }
+  &.green {
+    color: var(--dark-text);
+    background-color: #4caf50;
+    &:hover {
+      background-color: #43a047;
+    }
+    &:active {
+      background-color: #388e3c;
+    }
+  }
+  &.yellow {
+    color: var(--dark-text);
+    background-color: #ffeb3b;
+    &:hover {
+      background-color: #fdd835;
+    }
+    &:active {
+      background-color: #fbc02d;
+    }
+  }
+  &.round {
+    border-radius: 1.125rem;
+    border: 0;
+    box-shadow: 1px 0.25rem  0.25rem rgba(0, 0, 0, 0.2);
+    font-size: 2.25rem;
+    height: 2.25rem;
+    line-height: 1.25rem;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0;
+    text-align: center;
+    vertical-align: text-top;
+    width: 2.25rem;
+
+    &.hover {
+      position: fixed;
+    }
+    &.bottom {
+      bottom: 2rem;
+    }
+    &.right {
+      right: 2rem;
+    }
+  }
+}
+
+.tools {
+  display: block;
+  position: relative;
+  min-width: 1.5rem;
+  &:hover {
+    ul {
+      display: block;
+      opacity: 1;
+      z-index: 1;
+      transition: z-index 0.5s step-start, opacity 1s ease;
+    }
+    > i:nth-child(1) {
+      &::after {
+        background-color: rgba(0, 0, 0, 0.2);
+        content: "";
+        width: 1.5rem;
+        height: 1.5rem;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-radius: 1rem;
+      }
+    }
+  }
+  i {
+    display: inline-block;
+    width: 1.5rem;
+    height: 1.5rem;
+    cursor: pointer;
+  }
+  ul {
+    list-style: none;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    z-index: -1;
+    transition: z-index 0.5s step-end, opacity 1s ease;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.2);
+    background-color: white;
+    color: var(--dark-text);
+    margin: 1.85rem 0 0 0;
+    min-width: 10rem;
+
+    li {
+      height: 2rem;
+      line-height: 2rem;
+      font-size: 1.125rem;
+
+      i {
+        cursor: pointer;
+        height: 0.875rem;
+        line-height: 0.75rem;
+        padding-right: 0.5rem;
+        width: 1.125rem;
+        vertical-align: middle;
+      }
+      &.spacer {
+        width: 1px;
+        border-left: 1px solid rgba(0, 0, 0, 0.1);
+        margin-left: 0.6rem;
+        margin-right: 0.6rem;
+        height: 1.25rem;
+      }
+    }
+  }
+}
+
+button::before, .tools i::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  width: 0;
+  padding-top: 0;
+  border-radius: 100%;
+  background-color: rgba(236, 240, 241, 0.3);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+button:active::before, .tools i:active::before {
+  width: 120%;
+  padding-top: 120%;
+  transition: width .2s ease-out, padding-top .2s ease-out;
+}

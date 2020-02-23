@@ -22,12 +22,20 @@
   background-color: var(--purple-500);
 }
 
-.red {
-  background-color: var(--red-500);
+.yellow {
+  background-color: var(--yellow-500);
 }
 
 .orange {
   background-color: var(--orange-500);
+}
+
+.red {
+  background-color: var(--red-500);
+}
+
+.green {
+  background-color: var(--green-500);
 }
 
 *[data-click] {
@@ -64,29 +72,104 @@ article, aside, figcaption, figure, footer, header, nav, section, main, input, b
 /* PARAGRAPHS */
 
 h1, h2, h3, h4 {
-  margin: 1rem 0 .5rem;
-  /* Titles should be close to the text they describe */
   line-height: 1.25;
-  /* Bigger text is often nicer with smaller line height */
-  font-weight: 300;
-  /* Browser default. Use `normal` for less bulky titles */
 }
 
 h1 {
   font-size: 2rem;
+  font-weight: 400;
+  margin: 0;
+  padding: 0.65rem 1rem  0.25rem;
 }
 
 h2 {
   font-size: 1.5rem;
+  font-weight: 400;
+  margin: 0;
+  padding: 0 1rem 1rem 1rem;
 }
 
 h3 {
   font-size: 0.8rem;
-  font-weight: 400;
+  color: var(--dark-text);
+  font-weight: 300;
+  margin: 0.3em 0  0.25rem;
 }
 
 h4 {
+  font-weight: 300;
+  margin: 1rem 0 0.5rem;
   font-size: 1rem;
+}
+
+input, textarea, code {
+  display: block;
+  margin: 0 0.65rem 2 0.25rem 0;
+  font-size: 0.65rem;
+  font-weight: 300;
+  border: none;
+  border-bottom: 1px solid var(--secondary-color);
+  color: var(--dark-text);
+  padding-bottom: 1px;
+}
+
+textarea, code {
+  font-family: 'Roboto Mono', monospace;
+  width: 100%;
+  height: 15.5rem;
+  font-weight: 400;
+  display: inline-block;
+  resize: none;
+}
+
+textarea:focus, input:focus, code:focus {
+  border-bottom: 0.125rem solid var(--secondary-color-dark);
+  padding-bottom: 0;
+  outline: none;
+}
+
+textarea {
+  background-color: transparent;
+
+  &.short {
+    height: 6.25rem;
+  }
+
+  &:invalid, &.bad {
+    border-bottom: 0.125rem solid var(--red-500);
+    padding-bottom: 0;
+    outline: none;
+    box-shadow: none;
+  }
+}
+
+input {
+  &[type="text"], &[type="password"], &[type="email"] {
+    background-color: transparent;
+    width: 9.5rem;
+  }
+  &[type="checkbox"] {
+    margin: 0;
+  }
+}
+
+textarea, code {
+  border-bottom: 1px solid var(--secondary-color);
+  color: var(--dark-text);
+}
+
+input:focus, textarea:focus, code:focus {
+  border-bottom: 2px solid var(--secondary-color-dark);
+  color: var(--dark-text);
+}
+
+label {
+  display: block;
+  position: relative;
+  font-size: 0.75rem;
+  text-align: left;
+  color: rgba(0, 0, 0, 0.6);
+  margin: 0.5rem 0 0.5rem 0;
 }
 
 ul, ol {
@@ -94,6 +177,10 @@ ul, ol {
   /* Default for all browsers except IE */
   padding-left: 1.25rem;
   /* IE has a 40px margin-left instead */
+}
+
+strong {
+  font-weight: 500;
 }
 
 p {

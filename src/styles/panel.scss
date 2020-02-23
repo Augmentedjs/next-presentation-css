@@ -1,0 +1,79 @@
+.panel {
+  button {
+    &.bottom {
+      position: absolute;
+      left: 45%;
+      bottom: 0.5rem;
+      background-color: #e91e63;
+      z-index: 2;
+      transition: background-color 0.3s;
+    }
+    &.hugTop {
+      position: absolute;
+      top: 0.5rem;
+      left: 45%;
+      background-color: #e91e63;
+      z-index: 2;
+      transition: background-color 0.3s;
+    }
+  }
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0.125rem  0.25rem rgba(0, 0, 0, 0.1);
+  display: block;
+  position: relative;
+  margin: 1rem;
+  padding: 1rem;
+  z-index: auto;
+  textarea {
+    margin: 0;
+  }
+  div {
+    margin: 0 0 0.5rem;
+  }
+  h1 {
+    color: #43a047;
+    font-size: 1rem;
+    line-height: 1rem;
+    margin: 0 0 1rem;
+    padding: 0;
+    vertical-align: text-bottom;
+    i {
+      font-size: 1.5rem;
+      line-height: 1.25rem;
+      padding-right: 0.5rem;
+      vertical-align: text-bottom;
+    }
+  }
+  h2 {
+    font-size: 1rem;
+    line-height: 0.875rem;
+    padding-right: 0.5rem;
+    vertical-align: text-bottom;
+  }
+  ul {
+    list-style: none;
+    max-width: 31.25rem;
+    li {
+      font-size: 0.875rem;
+      font-weight: 400;
+      line-height: 1.125rem;
+      margin-right: 0;
+      padding: 0.5rem 1rem;
+      vertical-align: text-bottom;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      text-overflow: clip ellipsis;
+      word-wrap: break-word;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+  }
+  &.half {
+    width: 44%;
+  }
+  &.stack {
+    display: inline-block;
+    position: relative;
+    vertical-align: text-top;
+  }
+}
