@@ -1,0 +1,40 @@
+.header .menu:hover ul, .panel .menu:hover ul {
+  display: block;
+  visibility: visible;
+  opacity: 1.0;
+  transition-delay: 0s;
+  max-height: 31rem;
+}
+
+.header .menu li, .panel .menu li {
+  border-bottom: 1px solid transparent;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.125rem;
+  margin-right: 0;
+  padding: 0.5rem 1rem;
+  vertical-align: text-bottom;
+  width: 100%;
+}
+
+.header .menu li.spacer, .panel .menu li.spacer {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  height: 1px;
+  margin-bottom: 0.25rem;
+  padding: 0 1rem 0.25rem 0;
+}
+
+.header .menu li.spacer:hover, .panel .menu li.spacer:hover {
+  background-color: inherit;
+}
+
+.header .menu li i, .panel .menu li i {
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  padding-right: 1rem;
+  vertical-align: text-bottom;
+}
+
+.header .menu li:hover, .panel .menu li:hover {
+  background-color: #eeeeee;
+}

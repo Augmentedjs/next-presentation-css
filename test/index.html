@@ -11,12 +11,12 @@
     <title>Presentation CSS</title>
     <style>
       :root {
-        --primary-color: #607D8B;
-        --primary-color-dark: #455A64;
-        --primary-color-light: #90A4AE;
-        --secondary-color: #2196F3;
-        --secondary-color-dark: #1976D2;
-        --secondary-color-light: #90CAF9;
+        --primary-color: #9c27b0;
+        --primary-color-dark: #6a0080;
+        --primary-color-light: #d05ce3;
+        --secondary-color: #00bcd4;
+        --secondary-color-dark: #008ba3;
+        --secondary-color-light: #62efff;
         --background-color: #757575;
         --app-color: #EEEEEE;
         --panel-color: #EEEEEE;
@@ -27,23 +27,42 @@
     <link href="../src/styles/material-generic.css" rel="stylesheet" type="text/css"/>
   </head>
   <body>
-    <h1>Augmented.js Presentation SASS/CSS Module</h1>
+    <article id="main" class="main">
+      <section class="main panel">
+        <h1>Augmented.js Presentation SASS/CSS Module</h1>
 
-    <h2>What this is</h2>
-    <p>Augmented.js Presentation CSS is a custom implementation of Google's Material Design.
-      See <a href="https://material.io">Material Design</a>.<br/>
-      The difference from other libraries is the idea it could be used everywhere regardless of framework.
-      Also, the animations are <strong>pure</strong> css vs javascript, so some things will not be 100% but more performant with less footprint.
-    </p>
+        <h2>What this is</h2>
+        <p>Augmented.js Presentation CSS is a custom implementation of Google's Material Design.
+          See <a href="https://material.io">Material Design</a>.<br/>
+          The difference from other libraries is the idea it could be used everywhere regardless of framework.
+          Also, the animations are <strong>pure</strong> css vs javascript, so some things will not be 100% but more performant with less footprint.
+        </p>
 
-    <h2>Example of design system</h2>
-    <p>Styled elements are based on the basic HTML5 elements with little extra markup or classes.
-      The intention is to be simple to impliment.  These examples are at the atomic level.
-    </p>
+        <h2>Example of design system</h2>
+        <p>Styled elements are based on the basic HTML5 elements with little extra markup or classes.
+          The intention is to be simple to impliment.  These examples are at the atomic level.
+        </p>
 
-    <h3>Input Fields</h3>
-    <label for="text_example">Text Field
-      <input type="text" id="text_example" placeholder="text"/>
-    <label>
+        <h3>Input Fields</h3>
+        <p>Text fields let users enter and edit text.  These are multiple ways to create them.</p>
+
+        <h4>Label around input</h4>
+        <label for="text_example">Text Field
+          <input type="text" id="text_example" placeholder="text"/>
+        <label>
+
+        <h4>Label next to input</h4>
+        <label for="text_example">Text Field<label>
+        <input type="text" id="text_example" placeholder="text"/>
+
+        <h4>Container with label and input</h4>
+        <div class="input">
+
+          <input type="text" id="text_example" placeholder="text"/>
+          <label for="text_example">Text Field</label>
+        </div>
+
+      </section>
+    </article>
   </body>
 </html>

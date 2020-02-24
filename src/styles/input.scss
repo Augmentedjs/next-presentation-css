@@ -1,0 +1,198 @@
+input {
+  &[type="text"], &[type="password"], &[type="email"], &[type="file"] {
+    // background-color: transparent;
+    width: 8.5rem;
+  }
+  &[type="checkbox"] {
+    margin: 0;
+  }
+
+  ::placeholder {
+    position: absolute;
+    bottom: 0.25rem;
+    left: 0.25rem;
+  }
+}
+
+
+label {
+  display: block;
+  position: relative;
+  font-size: 0.75rem;
+  text-align: left;
+  color: rgba(0, 0, 0, 0.6);
+  margin: 0.5rem 0 0.5rem 0;
+}
+
+input, textarea, code {
+  display: block;
+  font-size: 0.65rem;
+  font-weight: 300;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 0.25rem 0.25rem 0 0;
+  border: none;
+  height: 2rem;
+  margin: 0 0.65rem 2 0.25rem 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.85);
+  color: var(--dark-text);
+  padding: 0 0.5rem 1px 0.5rem;
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.15);
+  }
+}
+
+textarea, code {
+  font-family: "Roboto Mono", monospace;
+  width: 100%;
+  height: 15.5rem;
+  font-weight: 400;
+  display: inline-block;
+  resize: none;
+}
+
+textarea:focus, input:focus, code:focus {
+  border-bottom: 0.125rem solid var(--primary-color-dark);
+  padding-bottom: 0;
+  outline: none;
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
+textarea {
+  background-color: transparent;
+
+  &.short {
+    height: 6.25rem;
+  }
+
+  &:invalid, &.bad {
+    border-bottom: 0.125rem solid var(--red-500);
+    padding-bottom: 0;
+    outline: none;
+    box-shadow: none;
+  }
+}
+
+textarea, code {
+  border-bottom: 1px solid var(--primary-color);
+  color: var(--dark-text);
+}
+
+input:focus, textarea:focus, code:focus {
+  border-bottom: 2px solid var(--primary-color-dark);
+  color: var(--dark-text);
+}
+
+/* new style with animated label, requires element with style 'input' to contain  */
+.input {
+  margin: 0 !important;
+  position: relative;
+  width: 9.5rem;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 0.25rem 0.25rem 0 0;
+  height: 2rem;
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.15);
+  }
+  &:focus-within {
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+
+  input {
+    border: none;
+    border-bottom: solid 1px rgba(0, 0, 0, 0.5);
+    padding: 1rem 0.5rem 0 0.5rem; /* 1.5rem 0.125rem 0.25rem;*/
+    width: calc(100% - 1rem);
+    background-color: transparent;
+    height: 1rem;
+
+    &::placeholder{
+      color: transparent;
+      display:none;
+    }
+    &:hover {
+      background-color: transparent;
+    }
+  }
+
+  input:placeholder-shown + label {
+    color: rgba(0,0,0,0.5);
+    font-size: 0.75rem;
+    top: 0.3rem;
+  }
+
+  input:focus + label, label {
+    color: var(--primary-color);
+    font-size: 0.5rem; /* 0.75 */
+    pointer-events: none;
+    position: absolute;
+    left: 0.5rem; /* 0.125rem; */
+    top: 0;
+    transition: top 0.4s, left 0.4s, font-size 0.4s;
+    margin: 0.125rem 0 0 0; /* new */
+  }
+
+  input:focus {
+    border-bottom: solid 2px var(--primary-color);
+  }
+
+  input:not(:placeholder-shown):not(:focus) {
+    border-bottom: solid 1px rgba(0, 0, 0, 0.5);
+    height: calc(1rem - 1px);
+    padding-bottom: 1px;
+  }
+
+  input:focus, input:not(:placeholder-shown) {
+    outline: none;
+    height: calc(1rem - 1px);
+  }
+}
+
+
+
+
+/* disable for now
+div {
+  &.input {
+    display: block;
+    position: relative;
+    height: 2rem;
+
+    &:focus-within > input:not(:placeholder-shown) {
+      label {
+        font-size: 0.4rem;
+        top: 0.25rem;
+        color: var(--secondary-color);
+      }
+    }
+
+    label {
+      position: absolute;
+      top: 0.5rem;
+      margin: 0;
+      left: 0.5rem;
+      height: 1rem;
+      transition: font-size 0.5s ease, top 0.5s ease;
+    }
+
+    input {
+      position: absolute;
+      height: 1rem;
+      padding: 1rem 0.5rem 1px 0.5rem;
+      bottom: 0;
+
+      &:focus {
+        height: calc(1rem - 1px);
+      }
+
+      &::placeholder {
+        opacity: 0;
+      }
+
+      &:placeholder-shown {
+        color: red;
+      }
+    }
+  }
+}
+*/

@@ -17,7 +17,7 @@
       transition: background-color 0.3s;
     }
   }
-  background-color: white;
+  background-color: var(--panel-color);
   border: 1px solid rgba(0, 0, 0, 0.1);
   box-shadow: 0 0.125rem  0.25rem rgba(0, 0, 0, 0.1);
   display: block;
@@ -32,7 +32,7 @@
     margin: 0 0 0.5rem;
   }
   h1 {
-    color: #43a047;
+    color: var(--primary-color);
     font-size: 1rem;
     line-height: 1rem;
     margin: 0 0 1rem;
@@ -48,7 +48,6 @@
   h2 {
     font-size: 1rem;
     line-height: 0.875rem;
-    padding-right: 0.5rem;
     vertical-align: text-bottom;
   }
   ul {
@@ -75,5 +74,32 @@
     display: inline-block;
     position: relative;
     vertical-align: text-top;
+  }
+}
+
+.panel .menu {
+  display: block;
+  position: absolute;
+  left: 0.65rem;
+  top: 0.75rem;
+  z-index: 3;
+  background: rgba(0, 0, 0, 0);
+  cursor: context-menu;
+
+  ul {
+    display: block;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0.125rem 0.25rem  0.25rem rgba(0, 0, 0, 0.1);
+    background-color: white;
+    z-index: 4;
+    margin: 0.25rem 1rem 0 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    visibility: hidden;
+    opacity: 0;
+    max-height: 1px;
+    transition: max-height 0.3s ease-out, visibility 0s linear 0.5s,opacity 0.5s linear;
+    margin: 0.25rem 0 0 1rem;
   }
 }

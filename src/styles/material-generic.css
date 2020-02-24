@@ -10,7 +10,9 @@
   --orange-500: #FF9800;
   --red-500: #F44336;
   --green-500: #4CAF50;
-  --black: black; }
+  --black: black;
+  /* base font size for rem */
+  font-size: 16px; }
 
 .blue {
   background-color: var(--blue-500); }
@@ -37,9 +39,8 @@ body {
   /* Browsers have default 8px margins _or_ padding! */
   margin: 0;
   padding: 0;
-  font-size: 16px;
   line-height: 1.5;
-  font-family: "Roboto", "Arial Nue", "Arial", "Verdana", "Helvetica Neue", "Helvetica", sans-serif;
+  font-family: "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica Neue", "Helvetica", "Arial Nue", "Arial", "sans-serif";
   font-weight: 300;
   color: var(--dark-text);
   -webkit-touch-callout: none;
@@ -64,81 +65,23 @@ h1, h2, h3, h4 {
 h1 {
   font-size: 2rem;
   font-weight: 400;
-  margin: 0;
-  padding: 0.65rem 1rem  0.25rem; }
+  margin: 0; }
 
 h2 {
   font-size: 1.5rem;
   font-weight: 400;
-  margin: 0;
-  padding: 0 1rem 1rem 1rem; }
+  margin: 0; }
 
 h3 {
   font-size: 0.8rem;
   color: var(--dark-text);
-  font-weight: 300;
+  font-weight: 400;
   margin: 0.3em 0  0.25rem; }
 
 h4 {
-  font-weight: 300;
-  margin: 1rem 0 0.5rem;
-  font-size: 1rem; }
-
-input, textarea, code {
-  display: block;
-  margin: 0 0.65rem 2 0.25rem 0;
-  font-size: 0.65rem;
-  font-weight: 300;
-  border: none;
-  border-bottom: 1px solid var(--secondary-color);
-  color: var(--dark-text);
-  padding-bottom: 1px; }
-
-textarea, code {
-  font-family: 'Roboto Mono', monospace;
-  width: 100%;
-  height: 15.5rem;
   font-weight: 400;
-  display: inline-block;
-  resize: none; }
-
-textarea:focus, input:focus, code:focus {
-  border-bottom: 0.125rem solid var(--secondary-color-dark);
-  padding-bottom: 0;
-  outline: none; }
-
-textarea {
-  background-color: transparent; }
-  textarea.short {
-    height: 6.25rem; }
-  textarea:invalid, textarea.bad {
-    border-bottom: 0.125rem solid var(--red-500);
-    padding-bottom: 0;
-    outline: none;
-    box-shadow: none; }
-
-input[type="text"], input[type="password"], input[type="email"] {
-  background-color: transparent;
-  width: 9.5rem; }
-
-input[type="checkbox"] {
-  margin: 0; }
-
-textarea, code {
-  border-bottom: 1px solid var(--secondary-color);
-  color: var(--dark-text); }
-
-input:focus, textarea:focus, code:focus {
-  border-bottom: 2px solid var(--secondary-color-dark);
-  color: var(--dark-text); }
-
-label {
-  display: block;
-  position: relative;
-  font-size: 0.75rem;
-  text-align: left;
-  color: rgba(0, 0, 0, 0.6);
-  margin: 0.5rem 0 0.5rem 0; }
+  margin: 1rem 0 0.5rem;
+  font-size: 0.75rem; }
 
 ul, ol {
   margin: 1rem 0;
@@ -167,8 +110,6 @@ a {
   color: var(--secondary-color); }
   a:visited {
     color: var(--secondary-color-dark); }
-  a:hover, a:focus {
-    /* ... */ }
   a:active, a:hover {
     outline: none; }
   a img {
@@ -200,6 +141,168 @@ input, button, select {
   vertical-align: middle;
   /* Helps keep form elements roughly aligned */ }
 
+input[type="text"], input[type="password"], input[type="email"], input[type="file"] {
+  width: 8.5rem; }
+
+input[type="checkbox"] {
+  margin: 0; }
+
+input ::placeholder {
+  position: absolute;
+  bottom: 0.25rem;
+  left: 0.25rem; }
+
+label {
+  display: block;
+  position: relative;
+  font-size: 0.75rem;
+  text-align: left;
+  color: rgba(0, 0, 0, 0.6);
+  margin: 0.5rem 0 0.5rem 0; }
+
+input, textarea, code {
+  display: block;
+  font-size: 0.65rem;
+  font-weight: 300;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 0.25rem 0.25rem 0 0;
+  border: none;
+  height: 2rem;
+  margin: 0 0.65rem 2 0.25rem 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.85);
+  color: var(--dark-text);
+  padding: 0 0.5rem 1px 0.5rem; }
+  input:hover, textarea:hover, code:hover {
+    background-color: rgba(0, 0, 0, 0.15); }
+
+textarea, code {
+  font-family: "Roboto Mono", monospace;
+  width: 100%;
+  height: 15.5rem;
+  font-weight: 400;
+  display: inline-block;
+  resize: none; }
+
+textarea:focus, input:focus, code:focus {
+  border-bottom: 0.125rem solid var(--primary-color-dark);
+  padding-bottom: 0;
+  outline: none;
+  background-color: rgba(0, 0, 0, 0.25); }
+
+textarea {
+  background-color: transparent; }
+  textarea.short {
+    height: 6.25rem; }
+  textarea:invalid, textarea.bad {
+    border-bottom: 0.125rem solid var(--red-500);
+    padding-bottom: 0;
+    outline: none;
+    box-shadow: none; }
+
+textarea, code {
+  border-bottom: 1px solid var(--primary-color);
+  color: var(--dark-text); }
+
+input:focus, textarea:focus, code:focus {
+  border-bottom: 2px solid var(--primary-color-dark);
+  color: var(--dark-text); }
+
+/* new style with animated label, requires element with style 'input' to contain  */
+.input {
+  margin: 0 !important;
+  position: relative;
+  width: 9.5rem;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 0.25rem 0.25rem 0 0;
+  height: 2rem; }
+  .input:hover {
+    background-color: rgba(0, 0, 0, 0.15); }
+  .input:focus-within {
+    background-color: rgba(0, 0, 0, 0.2); }
+  .input input {
+    border: none;
+    border-bottom: solid 1px rgba(0, 0, 0, 0.5);
+    padding: 1rem 0.5rem 0 0.5rem;
+    /* 1.5rem 0.125rem 0.25rem;*/
+    width: calc(100% - 1rem);
+    background-color: transparent;
+    height: 1rem; }
+    .input input::placeholder {
+      color: transparent;
+      display: none; }
+    .input input:hover {
+      background-color: transparent; }
+  .input input:placeholder-shown + label {
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 0.75rem;
+    top: 0.3rem; }
+  .input input:focus + label, .input label {
+    color: var(--primary-color);
+    font-size: 0.5rem;
+    /* 0.75 */
+    pointer-events: none;
+    position: absolute;
+    left: 0.5rem;
+    /* 0.125rem; */
+    top: 0;
+    transition: top 0.4s, left 0.4s, font-size 0.4s;
+    margin: 0.125rem 0 0 0;
+    /* new */ }
+  .input input:focus {
+    border-bottom: solid 2px var(--primary-color); }
+  .input input:not(:placeholder-shown):not(:focus) {
+    border-bottom: solid 1px rgba(0, 0, 0, 0.5);
+    height: calc(1rem - 1px);
+    padding-bottom: 1px; }
+  .input input:focus, .input input:not(:placeholder-shown) {
+    outline: none;
+    height: calc(1rem - 1px); }
+
+/* disable for now
+div {
+  &.input {
+    display: block;
+    position: relative;
+    height: 2rem;
+
+    &:focus-within > input:not(:placeholder-shown) {
+      label {
+        font-size: 0.4rem;
+        top: 0.25rem;
+        color: var(--secondary-color);
+      }
+    }
+
+    label {
+      position: absolute;
+      top: 0.5rem;
+      margin: 0;
+      left: 0.5rem;
+      height: 1rem;
+      transition: font-size 0.5s ease, top 0.5s ease;
+    }
+
+    input {
+      position: absolute;
+      height: 1rem;
+      padding: 1rem 0.5rem 1px 0.5rem;
+      bottom: 0;
+
+      &:focus {
+        height: calc(1rem - 1px);
+      }
+
+      &::placeholder {
+        opacity: 0;
+      }
+
+      &:placeholder-shown {
+        color: red;
+      }
+    }
+  }
+}
+*/
 .atariScroll {
   background: linear-gradient(180deg, #ff0000, #ffff00, #00ff00, #00ffff, #0000ff, #ff00ff);
   background-size: 1200% 1200%;
@@ -555,8 +658,7 @@ progress {
   margin-right: auto; }
 
 .underline {
-  text-decoration: underline;
-  font-style: normal; }
+  text-decoration: underline; }
 
 .controlPanel {
   margin-bottom: 0.65rem;
@@ -566,7 +668,7 @@ progress {
   color: var(--dark-text); }
 
 button {
-  font-family: "Libre Franklin", "Helvetica Neue", "Roboto", sans-serif;
+  font-family: "Libre Franklin", "Roboto", "Helvetica Neue", sans-serif;
   vertical-align: middle;
   transition: background-color 0.2s, color 0.2s;
   background-color: white;
@@ -594,17 +696,17 @@ button {
     background-color: var(--secondary-color);
     color: var(--primary-color-dark); }
   button:active {
-    background-color: #cfd8dc; }
+    background-color: var(--secondary-color-light); }
   button.blue {
-    background-color: #2196f3; }
+    background-color: var(--blue-500); }
   button.primary {
     border: 1px solid transparent;
     background-color: var(--primary-color);
     color: rgba(255, 255, 255, 0.85); }
     button.primary:hover {
-      background-color: #1e88e5; }
+      background-color: var(--primary-color-light); }
     button.primary:active {
-      background-color: #1976d2; }
+      background-color: var(--primary-color-dark); }
   button.red {
     color: rgba(255, 255, 255, 0.85);
     background-color: #f44336; }
@@ -724,7 +826,7 @@ button:active::before, .tools i:active::before {
   padding-top: 120%;
   transition: width .2s ease-out, padding-top .2s ease-out; }
 
-p.center, h1.center, h2.center, h3.center, h4.center {
+.center {
   text-align: center; }
 
 div.center, ul.center, ol.center {
@@ -842,31 +944,6 @@ div.center, ul.center, ol.center {
       max-height: 1px;
       transition: max-height 0.3s ease-out, visibility 0s linear 0.5s,opacity 0.5s linear; }
 
-.panel .menu {
-  display: block;
-  position: absolute;
-  left: 0.65rem;
-  top: 0.75rem;
-  z-index: 3;
-  background: rgba(0, 0, 0, 0);
-  cursor: context-menu; }
-  .panel .menu ul {
-    display: block;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    box-shadow: 0.125rem 0.25rem 0.25rem rgba(0, 0, 0, 0.1);
-    background-color: white;
-    z-index: 4;
-    margin: 0.25rem 1rem 0 0;
-    padding: 0;
-    list-style: none;
-    overflow: hidden;
-    visibility: hidden;
-    opacity: 0;
-    max-height: 1px;
-    transition: max-height 0.3s ease-out, visibility 0s linear 0.5s,opacity 0.5s linear;
-    margin: 0.25rem 0 0 1rem; }
-
-/* These are a bit strange and should get refactored */
 .header .menu:hover ul, .panel .menu:hover ul {
   display: block;
   visibility: visible;
@@ -985,7 +1062,7 @@ div.center, ul.center, ol.center {
     margin: 0 !important; }
 
 .panel {
-  background-color: white;
+  background-color: var(--panel-color);
   border: 1px solid rgba(0, 0, 0, 0.1);
   box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
   display: block;
@@ -1012,7 +1089,7 @@ div.center, ul.center, ol.center {
   .panel div {
     margin: 0 0 0.5rem; }
   .panel h1 {
-    color: #43a047;
+    color: var(--primary-color);
     font-size: 1rem;
     line-height: 1rem;
     margin: 0 0 1rem;
@@ -1026,7 +1103,6 @@ div.center, ul.center, ol.center {
   .panel h2 {
     font-size: 1rem;
     line-height: 0.875rem;
-    padding-right: 0.5rem;
     vertical-align: text-bottom; }
   .panel ul {
     list-style: none;
@@ -1049,6 +1125,30 @@ div.center, ul.center, ol.center {
     display: inline-block;
     position: relative;
     vertical-align: text-top; }
+
+.panel .menu {
+  display: block;
+  position: absolute;
+  left: 0.65rem;
+  top: 0.75rem;
+  z-index: 3;
+  background: rgba(0, 0, 0, 0);
+  cursor: context-menu; }
+  .panel .menu ul {
+    display: block;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0.125rem 0.25rem 0.25rem rgba(0, 0, 0, 0.1);
+    background-color: white;
+    z-index: 4;
+    margin: 0.25rem 1rem 0 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    visibility: hidden;
+    opacity: 0;
+    max-height: 1px;
+    transition: max-height 0.3s ease-out, visibility 0s linear 0.5s,opacity 0.5s linear;
+    margin: 0.25rem 0 0 1rem; }
 
 /* specific panels */
 .avatar {

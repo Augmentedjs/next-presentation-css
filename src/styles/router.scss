@@ -1,0 +1,13 @@
+/* router transitions */
+
+.main {
+  transition: opacity 1s ease;
+}
+
+.transition-in {
+  opacity: 1.0;
+}
+
+.transition-out {
+  opacity: 0;
+}

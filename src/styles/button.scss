@@ -1,5 +1,5 @@
 button {
-  font-family: "Libre Franklin", "Helvetica Neue", "Roboto", sans-serif;
+  font-family: "Libre Franklin", "Roboto", "Helvetica Neue", sans-serif;
   vertical-align: middle;
   transition: background-color 0.2s, color 0.2s;
 
@@ -32,11 +32,11 @@ button {
   }
 
   &:active {
-    background-color: #cfd8dc;
+    background-color: var(--secondary-color-light);
   }
 
   &.blue {
-    background-color: #2196f3;
+    background-color: var(--blue-500);
   }
 
   &.primary {
@@ -44,10 +44,10 @@ button {
     background-color: var(--primary-color);
     color: rgba(255, 255, 255, 0.85);
     &:hover {
-      background-color: #1e88e5;
+      background-color: var(--primary-color-light);
     }
     &:active {
-      background-color: #1976d2;
+      background-color: var(--primary-color-dark);
     }
   }
   &.red {
@@ -83,7 +83,7 @@ button {
   &.round {
     border-radius: 1.125rem;
     border: 0;
-    box-shadow: 1px 0.25rem  0.25rem rgba(0, 0, 0, 0.2);
+    box-shadow: 1px 0.25rem 0.25rem rgba(0, 0, 0, 0.2);
     font-size: 2.25rem;
     height: 2.25rem;
     line-height: 1.25rem;
