@@ -209,7 +209,6 @@ input:focus, textarea:focus, code:focus {
 
 /* new style with animated label, requires element with style 'input' to contain  */
 .input {
-  margin: 0 !important;
   position: relative;
   width: 9.5rem;
   background-color: rgba(0, 0, 0, 0.1);
@@ -236,6 +235,8 @@ input:focus, textarea:focus, code:focus {
     color: rgba(0, 0, 0, 0.5);
     font-size: 0.75rem;
     top: 0.3rem; }
+  .input input:not(:focus) + label {
+    color: rgba(0, 0, 0, 0.5); }
   .input input:focus + label, .input label {
     color: var(--primary-color);
     font-size: 0.5rem;
@@ -259,51 +260,6 @@ input:focus, textarea:focus, code:focus {
   .input input:focus, .input input:not(:placeholder-shown) {
     outline: none; }
 
-/* disable for now
-div {
-  &.input {
-    display: block;
-    position: relative;
-    height: 2rem;
-
-    &:focus-within > input:not(:placeholder-shown) {
-      label {
-        font-size: 0.4rem;
-        top: 0.25rem;
-        color: var(--secondary-color);
-      }
-    }
-
-    label {
-      position: absolute;
-      top: 0.5rem;
-      margin: 0;
-      left: 0.5rem;
-      height: 1rem;
-      transition: font-size 0.5s ease, top 0.5s ease;
-    }
-
-    input {
-      position: absolute;
-      height: 1rem;
-      padding: 1rem 0.5rem 1px 0.5rem;
-      bottom: 0;
-
-      &:focus {
-        height: calc(1rem - 1px);
-      }
-
-      &::placeholder {
-        opacity: 0;
-      }
-
-      &:placeholder-shown {
-        color: red;
-      }
-    }
-  }
-}
-*/
 .atariScroll {
   background: linear-gradient(180deg, #ff0000, #ffff00, #00ff00, #00ffff, #0000ff, #ff00ff);
   background-size: 1200% 1200%;
