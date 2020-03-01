@@ -1,5 +1,6 @@
 @import "./reset.scss";
 @import "./input.scss";
+@import "./input-large.scss";
 
 @import "./atariscroll.scss";
 
@@ -21,17 +22,6 @@ span {
 }
 
 @import "./hamburger.scss";
-
-code.bad, input:invalid {
-  border-bottom: 0.125rem solid var(--red-500);
-  padding-bottom: 0;
-  outline: none;
-  box-shadow: none;
-}
-
-input.full, textarea.full {
-  width: 100%;
-}
 
 progress {
   margin-left: auto;
@@ -144,14 +134,14 @@ div.center, ul.center, ol.center {
   font-size: 1em;
   height: 3rem;
   line-height: 3rem;
-  margin: 1 0.25rem !important;
+  margin: 1rem 0.25rem !important;
   position: relative;
   text-align: center;
   width: 3rem;
   &.large {
     width: 6rem;
     height: 6rem;
-    font-size: 2em;
+    font-size: 2rem;
     line-height: 6rem;
     flex: 0 0 6rem;
   }
@@ -160,12 +150,12 @@ div.center, ul.center, ol.center {
 .avatarTitle {
   margin-top: 1.25rem;
   &.large {
-    margin-top: 5 0.25rem;
+    margin-top: 5rem 0.25rem;
   }
 }
 
 .circle {
-  border-radius: 2 0.25rem;
+  border-radius: 2rem 0.25rem;
   &.large {
     border-radius: 3rem;
   }
