@@ -24,6 +24,7 @@
         --border-color: rgba(0,0,0,0.85);
       }
     </style>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="../src/styles/material-generic.css" rel="stylesheet" type="text/css"/>
   </head>
   <body>
@@ -38,12 +39,18 @@
           Also, the animations are <strong>pure</strong> css vs javascript, so some things will not be 100% but more performant with less footprint.
         </p>
 
-        <h2>Example of design system</h2>
+        <h2>Examples of design system</h2>
         <p>Styled elements are based on the basic HTML5 elements with little extra markup or classes.
           The intention is to be simple to impliment.  These examples are at the atomic level.
         </p>
 
-        <h3>Input Fields</h3>
+        <p>Table of Contents</p>
+        <dl>
+          <dd><a href="#input">Input Fields</a></dd>
+          <dd><a href="#button">Buttons</a></dd>
+        </dl>
+
+        <h3 id="input">Input Fields</h3>
         <p>Text fields let users enter and edit text.  These are multiple ways to create them.</p>
 
         <h4>Label around input</h4>
@@ -67,6 +74,24 @@
           <label for="text_example">Text Field</label>
         </div>
 
+        <hr/>
+
+        <h3 id="button">Buttons</h3>
+        <p>Text fields let users enter and edit text.  These are multiple ways to create them.</p>
+
+        <h4>Solid colored buttons</h4>
+        <button class="">Default Button</button>
+        <button class="blue">Solid Button</button>
+        <button class="red">Solid Button</button>
+        <button class="green"><i class="material-icons">edit</i>Action Button</button>
+
+        <h4>Flat buttons</h4>
+        <button class="flat">Default Button</button>
+
+        <h4>Round colored buttons</h4>
+        <button class="round">+</button>
+        <button class="round blue">+</button>
+        <button class="round red">+</button>
       </section>
     </article>
   </body>

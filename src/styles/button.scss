@@ -104,6 +104,22 @@ button {
       right: 2rem;
     }
   }
+
+  &.flat {
+    background-color: transparent;
+    border: 0 none;
+    box-shadow: none;
+    display: block;
+    margin: 0;
+    padding: 0.5rem;
+    color: var(--primary-color);
+
+    &:hover, &:active {
+      background-color: transparent;
+      color: var(--primary-color-dark);
+      border: 0 none;
+    }
+  }
 }
 
 .tools {
