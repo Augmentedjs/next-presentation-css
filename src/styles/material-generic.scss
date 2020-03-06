@@ -2,6 +2,7 @@
 @import "./input.scss";
 @import "./select.scss";
 @import "./input-large.scss";
+@import "./select-large.scss";
 
 @import "./atariscroll.scss";
 
@@ -81,27 +82,6 @@ div.center, ul.center, ol.center {
   dd {
     margin: 0 0 0 11rem;
     padding: 0 0 0.5em 0;
-  }
-}
-
-.inlineButton {
-  display: inline-block;
-  width: 1em;
-  height: 1em;
-  padding-left: 0.25rem;
-  padding-right: 0.25rem;
-  i {
-    font-size: 1em;
-    line-height: 1em;
-  }
-  &.large {
-    display: inline-block;
-    width: 1.5em;
-    height: 1.5em;
-    i {
-      font-size: 1.5em;
-      line-height: 1.5em;
-    }
   }
 }
 
