@@ -278,7 +278,7 @@ input:focus, textarea:focus, code:focus {
   font-weight: 300;
   background-color: rgba(0, 0, 0, 0.1);
   border-radius: 0.25rem 0.25rem 0 0;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.85);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
   height: 2rem;
   width: 8.5rem;
   margin: 0 0 0.75rem 0 !important; }
@@ -409,7 +409,6 @@ input:focus, textarea:focus, code:focus {
   margin: 0 0 1.5rem 0 !important;
   font-size: 1.3rem;
   border-radius: 0.5rem 0.5rem 0 0;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.85);
   height: 4rem;
   width: 18rem; }
   .panel div.select.large:after, div.select.large:after, .select.large:after {
