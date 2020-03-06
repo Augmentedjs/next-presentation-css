@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; media-src *; img-src 'self' data: content:;"/>
     <meta name="format-detection" content="telephone=no"/>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 		<meta name="apple-mobile-web-app-capable" content="yes"/>
@@ -57,10 +56,10 @@
         <h4>Label around input</h4>
         <label for="text_example">Text Field
           <input type="text" id="text_example" placeholder="text"/>
-        <label>
+        </label>
 
         <h4>Label next to input</h4>
-        <label for="text_example">Text Field<label>
+        <label for="text_example">Text Field</label>
         <input type="text" id="text_example" placeholder="text"/>
 
         <h4>Container with label and input</h4>
@@ -105,17 +104,28 @@
         <h4>In Header or Panel</h4>
 
         <div class="panel">
-          <i class="material-icons">more_horiz</i>
+
           <nav class="menu">
+            <i class="material-icons">more_horiz</i>
             <ul>
               <li>Item</li>
               <li>Item</li>
               <li>Item</li>
             </ul>
           </nav>
+
+          <p>Stuff in the panel</p>
         </div>
 
-
+        <div class="select">
+          <select id="select_example">
+            <option value="0" selected="selected">Select something</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+          </select>
+          <label for="select_example">Selection Example</label>
+        </div>
 
       </section>
     </article>

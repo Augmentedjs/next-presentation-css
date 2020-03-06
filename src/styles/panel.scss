@@ -1,4 +1,9 @@
 .panel {
+
+  > .panel {
+    background-color: white;
+  }
+  
   button {
     &.bottom {
       position: absolute;
