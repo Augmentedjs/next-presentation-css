@@ -1,6 +1,6 @@
 /* application header - top bar */
 .header {
-  background-color: #3b78e7;
+  background-color: var(--primary-color);
   border: 0 none;
   box-shadow: 0 0.25rem 0.25rem 0 rgba(0, 0, 0, 0.14), 0 0.25rem 0.25rem -0.125rem rgba(0, 0, 0, 0.2), 0 1px 0.5rem 0 rgba(0, 0, 0, 0.12);
   height: 3rem;
@@ -38,17 +38,17 @@
       opacity: 0.75;
     }
     &.showError {
-      background-color: #d50000;
+      background-color: 0;
       color: rgba(255, 255, 255, 0.85);
       bottom: -1.75rem;
       opacity: 0.75;
     }
   }
   &.green {
-    background-color: #4caf50;
+    background-color: var(--green-500);
   }
   &.red {
-    background-color: #d50000;
+    background-color: var(--red-500);
   }
   figure {
     display: block;

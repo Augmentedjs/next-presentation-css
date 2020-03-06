@@ -67,21 +67,23 @@ div.center, ul.center, ol.center {
 
 @import "./sidenav.scss";
 
-.editList dl {
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  margin: 0;
-  padding: 0.5rem;
-  font-size: 0.875rem;
-  font-weight: 300;
-  dt {
-    float: left;
-    clear: left;
-    min-width: 6.25rem;
-    text-align: right;
-  }
-  dd {
-    margin: 0 0 0 11rem;
-    padding: 0 0 0.5em 0;
+.editList {
+  dl {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    margin: 0;
+    padding: 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 300;
+    dt {
+      float: left;
+      clear: left;
+      min-width: 6.25rem;
+      text-align: right;
+    }
+    dd {
+      margin: 0 0 0 11rem;
+      padding: 0 0 0.5em 0;
+    }
   }
 }
 
