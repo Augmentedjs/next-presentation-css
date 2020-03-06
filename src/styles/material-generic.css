@@ -1735,3 +1735,12 @@ dialog {
   100% {
     left: 107%;
     right: -8%; } }
+
+/* form styles */
+form.material > legend {
+  margin: 0.5rem 0 1rem 0;
+  font-size: 1.5rem;
+  font-weight: 400; }
+
+form.material > button:last-of-type {
+  margin-right: auto; }

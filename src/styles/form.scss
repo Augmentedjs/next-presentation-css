@@ -1,0 +1,16 @@
+/* form styles */
+form {
+  &.material {
+    > legend {
+      margin: 0.5rem 0 1rem 0;
+      font-size: 1.5rem;
+      font-weight: 400;
+    }
+
+    > button {
+      &:last-of-type {
+        margin-right: auto;
+      }
+    }
+  }
+}
