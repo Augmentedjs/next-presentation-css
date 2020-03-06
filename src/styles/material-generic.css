@@ -327,6 +327,8 @@ input:focus, textarea:focus, code:focus {
     -moz-appearance: none;
     -webkit-appearance: none;
     appearance: none;
+    font-size: 0.75rem;
+    font-weight: 300;
     /* Support for rtl text, explicit support for Arabic and Hebrew */
     /* Disabled styles */ }
     .panel div.select > select::-ms-expand, div.select > select::-ms-expand, .select > select::-ms-expand {
@@ -422,11 +424,11 @@ input:focus, textarea:focus, code:focus {
   .panel div.select.large > label, div.select.large > label, .select.large > label {
     font-size: 1rem;
     left: 1rem;
-    margin: 0.25rem 0 0 0; }
+    margin: 0.5rem 0 0 0; }
   .panel div.select.large > select, div.select.large > select, .select.large > select {
     line-height: 2.6;
     padding: 1.5rem 0.5rem 0 0.75rem;
-    font-size: 1rem; }
+    font-size: 1.25rem; }
 
 .atariScroll {
   background: linear-gradient(180deg, #ff0000, #ffff00, #00ff00, #00ffff, #0000ff, #ff00ff);
