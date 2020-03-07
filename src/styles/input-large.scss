@@ -47,7 +47,7 @@
     input:placeholder-shown + label {
       color: rgba(0,0,0,0.5);
       font-size: 1.5rem;
-      top: 0.6rem;
+      top: 0.3rem;
     }
 
     input:not(:focus) + label {
@@ -59,7 +59,7 @@
       font-size: 1rem; /* 0.75 */
       pointer-events: none;
       position: absolute;
-      left: 01rem; /* 0.125rem; */
+      left: 1rem; /* 0.125rem; */
       top: 0;
       transition: top 0.4s, left 0.4s, font-size 0.4s;
       margin: 0.5rem 0 0 0; /* new */
