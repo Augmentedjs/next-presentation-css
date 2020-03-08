@@ -1,21 +1,23 @@
 button {
   font-family: "Libre Franklin", "Roboto", "Helvetica Neue", sans-serif;
   vertical-align: middle;
-  transition: background-color 0.2s, color 0.2s;
+  transition: background-color 0.2s, color 0.2s, box-shadow 0.3s ease;
 
   background-color: white;
   border: none;
-  border-radius: 0.125rem;
-  box-shadow: 1px 1px  0.25rem rgba(0, 0, 0, 0.2);
+  border-radius: 0.25rem;
+  box-shadow: 1px 1px 0.25rem rgba(0, 0, 0, 0.2);
   color: rgba(0, 0, 0, 0.6);
-  font-size: 0.75rem;
-  font-weight: 400;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: .0892857143em;
+  text-transform: uppercase;
   height: 2.25rem;
   line-height: 1rem;
   margin-left: 0.65rem;
   margin-right: 0;
+  min-width: 4rem;
   padding: 0 1rem;
-  text-transform: uppercase;
   cursor: pointer;
   overflow: hidden;
 
@@ -29,6 +31,7 @@ button {
     border-color: var(--secondary-color-dark);
     background-color: var(--secondary-color);
     color: var(--primary-color-dark);
+    box-shadow: 1px 3px 0.25rem rgba(0, 0, 0, 0.2);
   }
 
   &:active {
@@ -40,7 +43,6 @@ button {
   }
 
   &.primary {
-    border: 1px solid transparent;
     background-color: var(--primary-color);
     color: rgba(255, 255, 255, 0.85);
     &:hover {
@@ -49,18 +51,50 @@ button {
     &:active {
       background-color: var(--primary-color-dark);
     }
+
+    &.outline {
+      border: 1px solid var(--primary-color);
+      background-color: white;
+      color: var(--primary-color);
+
+      &:hover {
+        border: 1px solid var(--primary-color-light);
+      }
+      &:active {
+        border: 1px solid var(--primary-color-dark);
+      }
+    }
   }
 
   &.secondary {
-    border: 1px solid transparent;
     background-color: var(--secondary-color);
     color: rgba(255, 255, 255, 0.85);
     &:hover {
-      background-color: var(--primary-color-light);
+      background-color: var(--secondary-color-light);
     }
     &:active {
       background-color: var(--secondary-color-dark);
     }
+
+    &.outline {
+      border: 1px solid var(--secondary-color);
+      background-color: white;
+      color: var(--secondary-color);
+
+      &:hover {
+        border: 1px solid var(--secondary-color-light);
+      }
+      &:active {
+        border: 1px solid var(--secondary-color-dark);
+      }
+    }
+  }
+
+  &.outline {
+    border: 1px solid var(--dark-text);
+    color: var(--dark-text);
+    background-color: white;
+    box-shadow: none;
   }
 
   &.blue {
@@ -73,6 +107,19 @@ button {
     &:active {
       background-color: #0069c0;
     }
+
+    &.outline {
+      border: 1px solid var(--blue-500);
+      background-color: white;
+      color: var(--blue-500);
+
+      &:hover {
+        border: 1px solid #6ec6ff;
+      }
+      &:active {
+        border: 1px solid #0069c0;
+      }
+    }
   }
 
   &.red {
@@ -84,6 +131,19 @@ button {
     &:active {
       background-color: #ba000d;
     }
+
+    &.outline {
+      border: 1px solid #f44336;
+      background-color: white;
+      color: #f44336;
+
+      &:hover {
+        border: 1px solid #ff7961;
+      }
+      &:active {
+        border: 1px solid #ba000d;
+      }
+    }
   }
   &.green {
     color: var(--dark-text);
@@ -93,6 +153,19 @@ button {
     }
     &:active {
       background-color: #087f23;
+    }
+
+    &.outline {
+      border: 1px solid #4caf50;
+      background-color: white;
+      color: #4caf50;
+
+      &:hover {
+        border: 1px solid #4caf50;
+      }
+      &:active {
+        border: 1px solid #087f23;
+      }
     }
   }
   &.yellow {
@@ -104,21 +177,46 @@ button {
     &:active {
       background-color: #c8b900;
     }
+
+    &.outline {
+      border: 1px solid #ffeb3b;
+      background-color: white;
+      color: #ffeb3b;
+
+      &:hover {
+        border: 1px solid #ffff72;
+      }
+      &:active {
+        border: 1px solid #c8b900;
+      }
+    }
   }
-  &.round {
-    border-radius: 1.125rem;
+  /* fab (floating action button) */
+  &.round, &.fab {
     border: none;
-    box-shadow: 1px 0.25rem 0.25rem rgba(0, 0, 0, 0.2);
-    font-size: 2.25rem;
-    font-weight: 300;
-    height: 2.25rem;
-    line-height: 1.25rem;
+    box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2),
+                0px 6px 10px 0px rgba(0, 0, 0, 0.14),
+                0px 1px 18px 0px rgba(0,0,0,.12);
     margin-left: 0;
     margin-right: 0;
     padding: 0;
     text-align: center;
     vertical-align: text-top;
-    width: 2.25rem;
+
+    border-radius: 50%;
+    font-size: 1.5rem;
+    font-weight: 400;
+    height: 3.5rem;
+    line-height: 2rem;
+    width: 3.5rem;
+    min-width: 3.5rem;
+    max-width: 3.5rem;
+
+    &:hover {
+      box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.2),
+                  0px 8px 10px 1px rgba(0, 0, 0, 0.14),
+                  0px 3px 14px 2px rgba(0,0,0,.12);
+    }
 
     &.hover {
       position: fixed;
@@ -128,6 +226,14 @@ button {
     }
     &.right {
       right: 2rem;
+    }
+
+    &.mini {
+      height: 2.5rem;
+      line-height: 2.5rem;
+      width: 2.5rem;
+      min-width: 2.5rem;
+      max-width: 2.5rem;
     }
   }
 
