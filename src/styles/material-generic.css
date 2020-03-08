@@ -1189,27 +1189,30 @@ div.center, ul.center, ol.center {
   .leftNav div {
     display: block;
     position: relative;
-    margin: 0 1rem 0 0;
+    margin: 0;
     line-height: 2.5rem;
     font-size: 0.8rem;
-    padding-left: 3rem;
+    padding-left: 1rem;
     color: rgba(0, 0, 0, 0.75); }
     .leftNav div.label {
       font-size: 1rem;
       color: var(--dark-text); }
       .leftNav div.label i.material-icons.md-dark {
-        font-size: 1.7rem;
-        color: var(--dark-text); }
+        font-size: 1.2rem;
+        color: var(--dark-text);
+        line-height: 1.125rem; }
     .leftNav div:hover {
       background-color: #F5F5F5; }
     .leftNav div i.material-icons.md-dark {
-      display: block;
-      position: absolute;
+      display: inline-block;
+      position: relative;
       top: 0;
-      left: 1rem;
-      font-size: 1.4rem;
-      line-height: 2.5rem;
-      color: rgba(0, 0, 0, 0.5); }
+      left: 0;
+      font-size: 1rem;
+      line-height: 1.05rem;
+      color: rgba(0, 0, 0, 0.5);
+      padding-right: 1rem;
+      vertical-align: text-top; }
 
 .editList dl {
   border: 1px solid rgba(0, 0, 0, 0.1);
