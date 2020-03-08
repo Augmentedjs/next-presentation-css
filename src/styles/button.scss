@@ -4,7 +4,7 @@ button {
   transition: background-color 0.2s, color 0.2s;
 
   background-color: white;
-  border: 1px solid #cfd8dc;
+  border: none;
   border-radius: 0.125rem;
   box-shadow: 1px 1px  0.25rem rgba(0, 0, 0, 0.2);
   color: rgba(0, 0, 0, 0.6);
@@ -35,8 +35,8 @@ button {
     background-color: var(--secondary-color-light);
   }
 
-  &.blue {
-    background-color: var(--blue-500);
+  &:disabled {
+    opacity: 0.5;
   }
 
   &.primary {
@@ -50,41 +50,67 @@ button {
       background-color: var(--primary-color-dark);
     }
   }
+
+  &.secondary {
+    border: 1px solid transparent;
+    background-color: var(--secondary-color);
+    color: rgba(255, 255, 255, 0.85);
+    &:hover {
+      background-color: var(--primary-color-light);
+    }
+    &:active {
+      background-color: var(--secondary-color-dark);
+    }
+  }
+
+  &.blue {
+    background-color: var(--blue-500);
+
+    &:hover {
+      color: var(--dark-text);
+      background-color: #6ec6ff;
+    }
+    &:active {
+      background-color: #0069c0;
+    }
+  }
+
   &.red {
     color: rgba(255, 255, 255, 0.85);
     background-color: #f44336;
     &:hover {
-      background-color: #e53935;
+      background-color: #ff7961;
     }
     &:active {
-      background-color: #d32f2f;
+      background-color: #ba000d;
     }
   }
   &.green {
     color: var(--dark-text);
     background-color: #4caf50;
     &:hover {
-      background-color: #43a047;
+      background-color: #4caf50;
     }
     &:active {
-      background-color: #388e3c;
+      background-color: #087f23;
     }
   }
   &.yellow {
     color: var(--dark-text);
     background-color: #ffeb3b;
     &:hover {
-      background-color: #fdd835;
+      background-color: #ffff72;
     }
     &:active {
-      background-color: #fbc02d;
+      background-color: #c8b900;
     }
   }
   &.round {
     border-radius: 1.125rem;
-    border: 0;
+    border: none;
     box-shadow: 1px 0.25rem 0.25rem rgba(0, 0, 0, 0.2);
     font-size: 2.25rem;
+    font-weight: 300;
     height: 2.25rem;
     line-height: 1.25rem;
     margin-left: 0;
@@ -107,7 +133,7 @@ button {
 
   &.flat {
     background-color: transparent;
-    border: 0 none;
+    border: none;
     box-shadow: none;
     display: block;
     margin: 0;
