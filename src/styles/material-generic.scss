@@ -1,4 +1,5 @@
 @import "./reset.scss";
+
 @import "./input.scss";
 @import "./select.scss";
 @import "./input-large.scss";
@@ -7,6 +8,37 @@
 @import "./atariscroll.scss";
 
 @import "./icons.scss";
+
+@import "./code.scss";
+
+@import "./hamburger.scss";
+
+@import "./button.scss";
+
+@import "./header.scss";
+
+@import "./menu.scss";
+
+@import "./sidenav.scss";
+
+@import "./panel.scss";
+
+@import "./table.scss";
+
+@import "./dialog.scss";
+
+@import "./router.scss";
+
+@import "./indicator.scss";
+
+@import "./form.scss";
+
+@import "./list.scss";
+
+progress {
+  margin-left: auto;
+  margin-right: auto;
+}
 
 .secondary {
   font-size: 0.8rem;
@@ -23,13 +55,6 @@ span {
   }
 }
 
-@import "./hamburger.scss";
-
-progress {
-  margin-left: auto;
-  margin-right: auto;
-}
-
 .underline {
   text-decoration: underline;
 }
@@ -41,8 +66,6 @@ progress {
   padding-top: 0.65rem;
   color: var(--dark-text);
 }
-
-@import "./button.scss";
 
 .center {
   text-align: center;
@@ -59,32 +82,6 @@ div.center, ul.center, ol.center {
   position: fixed;
   top: 0;
   width: 100%;
-}
-
-@import "./header.scss";
-
-@import "./menu.scss";
-
-@import "./sidenav.scss";
-
-.editList {
-  dl {
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    margin: 0;
-    padding: 0.5rem;
-    font-size: 0.875rem;
-    font-weight: 300;
-    dt {
-      float: left;
-      clear: left;
-      min-width: 6.25rem;
-      text-align: right;
-    }
-    dd {
-      margin: 0 0 0 11rem;
-      padding: 0 0 0.5em 0;
-    }
-  }
 }
 
 .flexContainer {
@@ -105,8 +102,6 @@ div.center, ul.center, ol.center {
     }
   }
 }
-
-@import "./panel.scss";
 
 /* specific panels */
 
@@ -172,9 +167,6 @@ div.center, ul.center, ol.center {
   background-color: #FAFAFA;
 }
 
-@import "./table.scss";
-@import "./dialog.scss";
-
 .fade {
   opacity: 0;
 }
@@ -182,8 +174,6 @@ div.center, ul.center, ol.center {
 .content {
   margin: auto 0.5rem;
 }
-
-@import "./router.scss";
 
 /* notify */
 
@@ -196,7 +186,3 @@ div.center, ul.center, ol.center {
   display: none;
   visibility: hidden;
 }
-
-@import "./indicator.scss";
-
-@import "./form.scss";

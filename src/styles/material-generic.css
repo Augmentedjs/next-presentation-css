@@ -520,16 +520,15 @@ i.checkbox.hidden::before {
   visibility: visible;
   content: "check_box_outline_blank"; }
 
-.secondary {
-  font-size: 0.8rem;
-  color: rgba(0, 0, 0, 0.6);
-  margin-top: 0; }
+pre {
+  font-family: "Andale Mono", "Roboto Mono", "Monoco", "Fira Code Light", monospace;
+  line-height: 1.125rem; }
 
-span.green, span.valid {
-  color: var(--green-500); }
-
-span.red, span.invalid {
-  color: var(--red-500); }
+pre > code {
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: auto;
+  font-size: 1rem; }
 
 /* Hamburger */
 .wrapper {
@@ -770,20 +769,6 @@ span.red, span.invalid {
     margin: 3% 37%;
     width: 75%; }
   100% { } }
-
-progress {
-  margin-left: auto;
-  margin-right: auto; }
-
-.underline {
-  text-decoration: underline; }
-
-.controlPanel {
-  margin-bottom: 0.65rem;
-  margin-top: 0.65rem;
-  padding-bottom: 0.65rem;
-  padding-top: 0.65rem;
-  color: var(--dark-text); }
 
 button {
   font-family: "Libre Franklin", "Roboto", "Helvetica Neue", sans-serif;
@@ -1058,20 +1043,6 @@ button:active::before, .tools i:active::before {
       font-size: 1.5em;
       line-height: 1.5em; }
 
-.center {
-  text-align: center; }
-
-div.center, ul.center, ol.center {
-  margin-left: auto;
-  margin-right: auto; }
-
-.fixed {
-  display: block;
-  left: 0;
-  position: fixed;
-  top: 0;
-  width: 100%; }
-
 /* application header - top bar */
 .header {
   background-color: var(--primary-color);
@@ -1283,36 +1254,6 @@ div.center, ul.center, ol.center {
       padding-right: 1rem;
       vertical-align: text-top; }
 
-.editList dl {
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  margin: 0;
-  padding: 0.5rem;
-  font-size: 0.875rem;
-  font-weight: 300; }
-  .editList dl dt {
-    float: left;
-    clear: left;
-    min-width: 6.25rem;
-    text-align: right; }
-  .editList dl dd {
-    margin: 0 0 0 11rem;
-    padding: 0 0 0.5em 0; }
-
-.flexContainer {
-  display: flex;
-  /* establish flex container */
-  flex-direction: row;
-  /* default value; can be omitted */
-  flex-wrap: nowrap;
-  /* default value; can be omitted */
-  justify-content: space-between;
-  /* switched from default (flex-start, see below) */
-  flex-grow: 1;
-  align-items: flex-start;
-  margin: 0.5rem 0 !important; }
-  .flexContainer > p, .flexContainer > div {
-    margin: 0 !important; }
-
 .panel {
   background-color: var(--panel-color);
   border: 1px solid rgba(0, 0, 0, 0.1);
@@ -1403,57 +1344,6 @@ div.center, ul.center, ol.center {
     max-height: 1px;
     transition: max-height 0.3s ease-out, visibility 0s linear 0.5s,opacity 0.5s linear;
     margin: 0.25rem 0 0 1rem; }
-
-/* specific panels */
-.avatar {
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
-  display: block;
-  font-size: 1em;
-  height: 3rem;
-  line-height: 3rem;
-  margin: 1rem 0.25rem !important;
-  position: relative;
-  text-align: center;
-  width: 3rem; }
-  .avatar.large {
-    width: 6rem;
-    height: 6rem;
-    font-size: 2rem;
-    line-height: 6rem;
-    flex: 0 0 6rem; }
-
-.avatarTitle {
-  margin-top: 1.25rem; }
-  .avatarTitle.large {
-    margin-top: 5rem 0.25rem; }
-
-.circle {
-  border-radius: 2rem 0.25rem; }
-  .circle.large {
-    border-radius: 3rem; }
-
-.float.left {
-  float: left; }
-
-.float.right {
-  float: right; }
-
-.vcenter {
-  vertical-align: middle; }
-
-.box {
-  background-color: white;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
-  margin-bottom: 0.5rem; }
-
-.card {
-  display: block;
-  border: 1px solid #cfd8dc;
-  border-radius: 0.125rem;
-  box-shadow: 1px 1px 0.25rem rgba(0, 0, 0, 0.2);
-  background-color: #FAFAFA; }
 
 /* TABLES */
 table {
@@ -1747,12 +1637,6 @@ dialog {
   transform: translateX(19rem);
   opacity: 0; }
 
-.fade {
-  opacity: 0; }
-
-.content {
-  margin: auto 0.5rem; }
-
 /* router transitions */
 .main {
   transition: opacity 1s ease; }
@@ -1762,15 +1646,6 @@ dialog {
 
 .transition-out {
   opacity: 0; }
-
-/* notify */
-.slide {
-  transform: translateX(18.75rem);
-  opacity: 0; }
-
-.hide {
-  display: none;
-  visibility: hidden; }
 
 /* Progress Bar */
 .progress {
@@ -1867,3 +1742,191 @@ form.material > legend {
 
 form.material > button:last-of-type {
   margin-right: auto; }
+
+ul, ol {
+  display: block;
+  visibility: visible;
+  opacity: 1.0;
+  transition-delay: 0s;
+  max-height: 31rem; }
+  ul li, ol li {
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.25rem;
+    margin: 0;
+    padding: 0.5rem 1rem;
+    vertical-align: text-bottom;
+    width: 100%; }
+    ul li:hover, ol li:hover {
+      background-color: #eeeeee; }
+    ul li i, ol li i {
+      font-size: 0.875rem;
+      line-height: 1.25rem;
+      padding-right: 1rem;
+      vertical-align: text-bottom;
+      color: rgba(0, 0, 0, 0.54); }
+  ul.list, ol.list {
+    margin: 0;
+    padding: 0; }
+    ul.list li, ol.list li {
+      line-height: 2.5rem;
+      display: flex;
+      position: relative;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 0 1rem;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden; }
+    ul.list i, ol.list i {
+      display: inline-flex;
+      margin-left: 0;
+      margin-right: 2rem;
+      width: 1.5rem;
+      height: 1.5rem;
+      flex-shrink: 0;
+      align-items: center;
+      justify-content: center;
+      fill: currentColor; }
+
+ul.list li {
+  list-style: none; }
+
+ol.list li {
+  list-style: decimal; }
+
+.editList dl {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  margin: 0;
+  padding: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 300; }
+  .editList dl dt {
+    float: left;
+    clear: left;
+    min-width: 6.25rem;
+    text-align: right; }
+  .editList dl dd {
+    margin: 0 0 0 11rem;
+    padding: 0 0 0.5em 0; }
+
+progress {
+  margin-left: auto;
+  margin-right: auto; }
+
+.secondary {
+  font-size: 0.8rem;
+  color: rgba(0, 0, 0, 0.6);
+  margin-top: 0; }
+
+span.green, span.valid {
+  color: var(--green-500); }
+
+span.red, span.invalid {
+  color: var(--red-500); }
+
+.underline {
+  text-decoration: underline; }
+
+.controlPanel {
+  margin-bottom: 0.65rem;
+  margin-top: 0.65rem;
+  padding-bottom: 0.65rem;
+  padding-top: 0.65rem;
+  color: var(--dark-text); }
+
+.center {
+  text-align: center; }
+
+div.center, ul.center, ol.center {
+  margin-left: auto;
+  margin-right: auto; }
+
+.fixed {
+  display: block;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%; }
+
+.flexContainer {
+  display: flex;
+  /* establish flex container */
+  flex-direction: row;
+  /* default value; can be omitted */
+  flex-wrap: nowrap;
+  /* default value; can be omitted */
+  justify-content: space-between;
+  /* switched from default (flex-start, see below) */
+  flex-grow: 1;
+  align-items: flex-start;
+  margin: 0.5rem 0 !important; }
+  .flexContainer > p, .flexContainer > div {
+    margin: 0 !important; }
+
+/* specific panels */
+.avatar {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
+  display: block;
+  font-size: 1em;
+  height: 3rem;
+  line-height: 3rem;
+  margin: 1rem 0.25rem !important;
+  position: relative;
+  text-align: center;
+  width: 3rem; }
+  .avatar.large {
+    width: 6rem;
+    height: 6rem;
+    font-size: 2rem;
+    line-height: 6rem;
+    flex: 0 0 6rem; }
+
+.avatarTitle {
+  margin-top: 1.25rem; }
+  .avatarTitle.large {
+    margin-top: 5rem 0.25rem; }
+
+.circle {
+  border-radius: 2rem 0.25rem; }
+  .circle.large {
+    border-radius: 3rem; }
+
+.float.left {
+  float: left; }
+
+.float.right {
+  float: right; }
+
+.vcenter {
+  vertical-align: middle; }
+
+.box {
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
+  margin-bottom: 0.5rem; }
+
+.card {
+  display: block;
+  border: 1px solid #cfd8dc;
+  border-radius: 0.125rem;
+  box-shadow: 1px 1px 0.25rem rgba(0, 0, 0, 0.2);
+  background-color: #FAFAFA; }
+
+.fade {
+  opacity: 0; }
+
+.content {
+  margin: auto 0.5rem; }
+
+/* notify */
+.slide {
+  transform: translateX(18.75rem);
+  opacity: 0; }
+
+.hide {
+  display: none;
+  visibility: hidden; }

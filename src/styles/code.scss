@@ -1,0 +1,11 @@
+pre {
+  font-family: "Andale Mono", "Roboto Mono", "Monoco", "Fira Code Light", monospace;
+  line-height: 1.125rem;
+}
+
+pre > code {
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: auto;
+  font-size: 1rem;
+}
