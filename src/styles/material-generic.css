@@ -1090,6 +1090,19 @@ button:active::before, .tools i:active::before {
     background-color: var(--green-500); }
   .header.red {
     background-color: var(--red-500); }
+  .header .user {
+    display: block;
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    width: 2rem;
+    height: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.85);
+    border-radius: 50%;
+    line-height: 2rem;
+    font-size: 1rem;
+    text-align: center;
+    background-color: black; }
   .header figure {
     display: block;
     position: absolute;
