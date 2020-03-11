@@ -1239,7 +1239,7 @@ button:active::before, .tools i:active::before {
   z-index: 1;
   height: calc(100% - 4rem);
   border-right: 1px solid rgba(0, 0, 0, 0.5); }
-  .leftNav div {
+  .leftNav > div {
     display: block;
     position: relative;
     margin: 0;
@@ -1247,16 +1247,16 @@ button:active::before, .tools i:active::before {
     font-size: 0.8rem;
     padding-left: 1rem;
     color: rgba(0, 0, 0, 0.75); }
-    .leftNav div.label {
+    .leftNav > div.label {
       font-size: 1rem;
       color: var(--dark-text); }
-      .leftNav div.label i.material-icons.md-dark {
+      .leftNav > div.label i.material-icons.md-dark {
         font-size: 1.2rem;
         color: var(--dark-text);
         line-height: 1.125rem; }
-    .leftNav div:hover {
+    .leftNav > div:hover {
       background-color: #F5F5F5; }
-    .leftNav div i.material-icons.md-dark {
+    .leftNav > div i.material-icons.md-dark {
       display: inline-block;
       position: relative;
       top: 0;

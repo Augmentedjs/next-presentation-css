@@ -52,7 +52,7 @@
   height: calc(100% - 4rem);
   border-right: 1px solid rgba(0,0,0,0.5);
 
-  div {
+  > div {
     display: block;
     position: relative;
     margin: 0;
