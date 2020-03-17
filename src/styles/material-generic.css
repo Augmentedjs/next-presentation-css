@@ -1824,6 +1824,48 @@ ol.list li {
     margin: 0 0 0 11rem;
     padding: 0 0 0.5em 0; }
 
+:root {
+  --drawer-width: 25rem;
+  --drawer-height: 20rem; }
+
+.drawer {
+  display: inline-block;
+  position: relative;
+  width: var(--drawer-width);
+  height: var(--drawer-height);
+  padding: 0.5rem;
+  border: 1px solid var(--border-color);
+  background-color: var(--panel-color);
+  box-shadow: 0 0.25rem 0.5rem var(--border-color); }
+  .drawer .content {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    margin: 0; }
+    .drawer .content h1 {
+      line-height: var(--drawer-height);
+      text-align: center; }
+  .drawer .innerdrawer {
+    display: block;
+    position: absolute;
+    border: 1px solid var(--border-color);
+    background-color: var(--panel-color);
+    width: 100%;
+    left: -1px;
+    top: -1px;
+    padding: 0.5rem;
+    transition: transform 1s ease;
+    z-index: -1;
+    width: var(--drawer-width);
+    height: var(--drawer-height);
+    font-size: 0.75rem;
+    overflow: auto;
+    box-shadow: 0 0.25rem 0.5rem var(--border-color); }
+    .drawer .innerdrawer.visible {
+      transform: translateX(calc(var(--drawer-width) + 13px)); }
+
 progress {
   margin-left: auto;
   margin-right: auto; }
