@@ -1,0 +1,95 @@
+ul, ol {
+  display: block;
+  visibility: visible;
+  opacity: 1.0;
+  transition-delay: 0s;
+  max-height: 31rem;
+
+  li {
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.25rem;
+    margin: 0;
+    padding: 0.5rem 1rem;
+    vertical-align: text-bottom;
+    width: 100%;
+
+    &:hover {
+      background-color: #eeeeee;
+    }
+
+    i {
+      font-size: 0.875rem;
+      line-height: 1.25rem;
+      padding-right: 1rem;
+      vertical-align: text-bottom;
+      color: rgba(0,0,0,.54);
+    }
+  }
+
+  &.list {
+    margin: 0;
+    padding: 0;
+
+    li {
+      line-height: 2.5rem;
+      display: flex;
+      position: relative;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 0 1rem;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+
+    i {
+      display: inline-flex;
+      margin-left: 0;
+      margin-right: 2rem;
+      width: 1.5rem;
+      height: 1.5rem;
+      flex-shrink: 0;
+      align-items: center;
+      justify-content: center;
+      fill: currentColor;
+    }
+  }
+}
+
+ul {
+  &.list {
+    li {
+      list-style: none;
+    }
+  }
+}
+
+ol {
+  &.list {
+    li {
+      list-style: decimal;
+    }
+  }
+}
+
+.editList {
+  dl {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    margin: 0;
+    padding: 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 300;
+    dt {
+      float: left;
+      clear: left;
+      min-width: 6.25rem;
+      text-align: right;
+    }
+    dd {
+      margin: 0 0 0 11rem;
+      padding: 0 0 0.5em 0;
+    }
+  }
+}

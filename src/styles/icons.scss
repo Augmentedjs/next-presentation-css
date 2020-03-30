@@ -1,0 +1,72 @@
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 1.5rem;
+  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+  /* Support for Firefox. */
+  /* -moz-osx-font-smoothing: grayscale; Don't like this trend */
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+  &.md-18 {
+    font-size: 1.125rem;
+  }
+  &.md-24 {
+    font-size: 1.5rem;
+  }
+  &.md-36 {
+    font-size: 2.25rem;
+  }
+  &.md-48 {
+    font-size: 3rem;
+  }
+  &.md-dark {
+    color: rgba(0, 0, 0, 0.54);
+    &.md-inactive {
+      color: rgba(0, 0, 0, 0.26);
+    }
+  }
+  &.md-light {
+    color: rgba(255, 255, 255, 0.85);
+    outline: none;
+    border: 0;
+    background-color: transparent;
+    &.md-inactive {
+      color: rgba(255, 255, 255, 0.3);
+    }
+  }
+}
+
+i {
+  &.radio {
+    &::before {
+      visibility: visible;
+      content: "radio_button_checked";
+    }
+    &.hidden::before {
+      visibility: visible;
+      content: "radio_button_unchecked";
+    }
+  }
+  &.checkbox {
+    &::before {
+      visibility: visible;
+      content: "check_box";
+    }
+    &.hidden::before {
+      visibility: visible;
+      content: "check_box_outline_blank";
+    }
+  }
+}
