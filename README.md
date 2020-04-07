@@ -27,9 +27,17 @@ Install using NPM
 For use in a project, import directly.
 
 > `import sass from "presentation-css";`
+- or -
 > `import "presentation-css";`
 
 ## Use compiled css
 
 > `import css from "./node_modules/presentation-css/src/material-generic.css";`
+- or -
 > `import "./node_modules/presentation-css/src/material-generic.css";`
+
+## Dark Mode
+
+> `import dark from "./node_modules/presentation-css/src/dark/darkmode.scss";`
+- or -
+> `import "./node_modules/presentation-css/src/dark/darkmode.scss";`
