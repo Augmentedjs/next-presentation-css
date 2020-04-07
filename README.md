@@ -8,12 +8,12 @@ Augmented.js Presentation CSS is a custom implementation of Google's Material De
 Presentation CSS comes in versions 2+.  
 * 1.x.x is built-in to Augmented.js Presentation as an included CSS (Not for use with Augmented Next)
 * 2.x.x is for older CSS design systems (Material 1.x)
-- Use with older Augmented Next apps
+..- Use with older Augmented Next apps
 * 3.x.x is fully SASS-based (Material 1.x) and for newer apps with a SASS build system
-- Does include a compiled CSS for non-SASS apps
+..- Does include a compiled CSS for non-SASS apps
 * 4.x.x is fully SASS-based (Material 2.x) and for newer apps with a SASS build system  
-- Does include a compiled CSS for non-SASS apps
-- Includes a Dark Mode Theme under /src/dark
+..- Does include a compiled CSS for non-SASS apps
+..- Includes a Dark Mode Theme under /src/dark
 
 # Install
 Install using NPM
