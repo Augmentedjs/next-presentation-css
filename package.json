@@ -1,10 +1,10 @@
 {
   "name": "presentation-css",
-  "version": "4.9.1",
+  "version": "4.10.0",
   "description": "The Augmented.js Next - Presentation SASS/CSS Module.",
   "main": "src/styles/material-generic.scss",
   "scripts": {
-    "sass": "node-sass src/styles/material-generic.scss > src/styles/material-generic.css"
+    "sass": "node-sass src/styles/material-generic.scss > src/styles/material-generic.css && node-sass src/styles/dark/darkmode.scss > src/styles/dark/darkmode.css"
   },
   "repository": {
     "type": "git",

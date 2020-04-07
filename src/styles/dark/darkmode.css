@@ -1,0 +1,155 @@
+/* set these for the app's branding */
+:root {
+  --background-color: #181818;
+  --app-color: #212121;
+  --panel-color: #212121;
+  --table-background: #202020;
+  --app-text: rgba(255,255,255,0.85);
+  --border-color: rgba(255,255,255,0.2); }
+
+/* recolor basic elements */
+body, h3, table td, table th, textarea, code, label, input, select {
+  color: var(--light-text); }
+
+table, table td, table th {
+  border: 1px solid var(--light-text); }
+
+input:focus, textarea:focus, code:focus {
+  color: var(--light-text); }
+
+.material-icons.md-dark {
+  color: var(--light-text); }
+
+.facets {
+  color: var(--light-text); }
+  .facets h1 {
+    color: var(--light-text); }
+  .facets .size {
+    border-color: var(--light-text); }
+
+.input input:not(:focus) + label, .input.large input:not(:focus) + label {
+  color: rgba(255, 255, 255, 0.5); }
+
+.input.large input:not(:placeholder-shown):not(:focus) {
+  border-bottom: 1px solid var(--light-text); }
+
+.panel div.select.large > select, div.select.large > select, .select.large > select {
+  line-height: 2.6;
+  padding: 1.5rem 0.5rem 0 0.75rem;
+  font-size: 1.25rem; }
+
+.panel div.select > select, div.select > select, .select > select {
+  color: var(--light-text); }
+
+.panel div.select > label, div.select > label, .select > label {
+  color: rgba(255, 255, 255, 0.5); }
+
+.panel div.select, div.select, .select {
+  border-bottom: 1px solid var(--light-text); }
+
+.panel .menu ul {
+  background-color: var(--panel-color); }
+  .panel .menu ul li:hover {
+    background-color: rgba(255, 255, 255, 0.5); }
+
+.input input, .input.large input, input, .select > select, .select.large > select {
+  border-bottom: 1px solid var(--light-text); }
+
+/* fix shadow on panel */
+.panel, .box, .card, dialog, .splash {
+  background-color: var(--app-color);
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
+  border: none; }
+
+dialog {
+  color: var(--light-text); }
+  dialog h1, dialog h2, dialog h3, dialog h4, dialog h5, dialog h6 {
+    color: var(--light-text); }
+
+/* recolor hamburger */
+.menu {
+  font-size: 1rem;
+  color: var(--light-text);
+  top: -1rem;
+  background-color: rgba(0, 0, 0, 0.85); }
+  .menu i.material-icons.md-dark {
+    color: rgba(255, 255, 255, 0.55); }
+  .menu div:first-child {
+    color: var(--secondary-color-light);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
+  .menu div.spacer {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
+  .menu div:hover {
+    background-color: var(--secondary-color-dark); }
+
+table.material {
+  background-color: var(--table-background); }
+  table.material td, table.material td.label, table.material th, table.material input, table.material td input, table.material caption, table.material select {
+    color: var(--light-text); }
+  table.material td, table.material th {
+    color: var(--app-text);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
+    table.material td:hover, table.material th:hover {
+      color: var(--app-text);
+      background-color: var(--secondary-color-dark); }
+
+a {
+  color: var(--secondary-color-light); }
+
+.list i {
+  color: rgba(255, 255, 255, 0.5); }
+
+.leftNav {
+  border-right: 1px solid rgba(255, 255, 255, 0.5); }
+  .leftNav > div {
+    color: rgba(255, 255, 255, 0.5); }
+    .leftNav > div i.material-icons.md-dark {
+      color: rgba(255, 255, 255, 0.5); }
+    .leftNav > div.label {
+      color: rgba(255, 255, 255, 0.75); }
+      .leftNav > div.label i.material-icons.md-dark {
+        color: rgba(255, 255, 255, 0.75); }
+      .leftNav > div.label:hover {
+        background-color: inherit; }
+    .leftNav > div:hover {
+      background-color: rgba(0, 0, 0, 0.25); }
+
+dialog button, button {
+  border: none;
+  color: var(--primary-color-light); }
+  dialog button:hover, button:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+    color: var(--primary-color-light); }
+
+a {
+  color: var(--secondary-color); }
+  a:hover {
+    color: var(--secondary-color-light); }
+  a:visited {
+    color: var(--secondary-color); }
+
+ul li:hover, ol li:hover {
+  background-color: var(--secondary-color-dark); }
+
+dialog.about h1 {
+  color: var(--primary-color-light); }
+
+.barChart {
+  border-color: var(--light-text); }
+  .barChart td.label p, .barChart.horizontal td.label p {
+    color: var(--light-text); }
+  .barChart.vertical td {
+    border-color: rgba(255, 255, 255, 0.4);
+    background: repeating-linear-gradient(to bottom, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1) 1px, transparent 1px, transparent 5%); }
+  .barChart > tbody:nth-child(2) > tr:nth-child(1) > td:nth-child(2) {
+    border-left: 1px solid rgba(255, 255, 255, 0.4); }
+  .barChart > tbody:nth-child(2) > tr > td:last-of-type {
+    border-right: 1px solid rgba(255, 255, 255, 0.4); }
+  .barChart.horizontal td {
+    background: repeating-linear-gradient(to right, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1) 1px, transparent 1px, transparent 5%); }
+  .barChart.horizontal > tbody:nth-child(2) > tr:nth-child(1) > td:nth-child(2) {
+    border-top: 1px solid rgba(255, 255, 255, 0.4); }
+  .barChart.horizontal > tbody:nth-child(2) > tr:last-of-type > td:nth-child(2) {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4); }
+  .barChart.horizontal > tbody:nth-child(2) > tr > td:nth-child(2) {
+    border-left: 1px solid rgba(255, 255, 255, 0.4); }
