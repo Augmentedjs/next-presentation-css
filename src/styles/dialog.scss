@@ -10,7 +10,7 @@ dialog {
   z-index: auto;
   border: none;
   &.alert {
-    height: 6rem;
+    height: 7rem;
     margin-left: -11.5rem;
     margin-top: -8.75rem;
     width: 23rem;
@@ -47,9 +47,9 @@ dialog {
     bottom: 0.5rem;
     display: block;
     position: absolute;
-    right: 1rem;
+    right: 0.5rem;
     text-align: right;
-    width: 100%;
+    width: calc(100% - 1rem);
   }
   h1 {
     color: var(--dark-text);
