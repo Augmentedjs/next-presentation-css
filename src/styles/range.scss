@@ -1,0 +1,99 @@
+/* Range control */
+input[type=range] {
+  height: 1.5rem;
+  -webkit-appearance: none;
+  margin: 0.625rem 0;
+  width: 100%;
+  border: none;
+  padding: 0;
+}
+input[type=range]:focus {
+  outline: none;
+}
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 0.125rem;
+  cursor: pointer;
+  animate: 0.2s;
+  box-shadow: none;
+  background: var(--secondary-color);
+  border-radius: 0.25rem;
+  border: none;
+}
+input[type=range]::-webkit-slider-thumb {
+  box-shadow: none;
+  border: none;
+  height: 1.125rem;
+  width: 1.125rem;
+  border-radius: 1.5rem;
+  background: var(--secondary-color);
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -0.5rem;
+}
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: var(--secondary-color);
+}
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 0.125rem;
+  cursor: pointer;
+  animate: 0.2s;
+  box-shadow: none;
+  background: var(--secondary-color);
+  border-radius: 0.25rem;
+  border: none;
+}
+input[type=range]::-moz-range-thumb {
+  box-shadow: none;
+  border: none;
+  height: 1.125rem;
+  width: 1.125rem;
+  border-radius: 1.5rem;
+  background: var(--secondary-color);
+  cursor: pointer;
+}
+input[type=range]::-ms-track {
+  width: 100%;
+  height: 0.125rem;
+  cursor: pointer;
+  animate: 0.2s;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+input[type=range]::-ms-fill-lower {
+  background: var(--secondary-color);
+  border: none;
+  border-radius: 0.625rem;
+  box-shadow: none;
+}
+input[type=range]::-ms-fill-upper {
+  background: var(--secondary-color);
+  border: none;
+  border-radius: 0.625rem;
+  box-shadow: none;
+}
+input[type=range]::-ms-thumb {
+  margin-top: 1px;
+  box-shadow: none;
+  border: none;
+  height: 1.125rem;
+  width: 1.125rem;
+  border-radius: 1.5rem;
+  background: var(--secondary-color);
+  cursor: pointer;
+}
+input[type=range]:focus::-ms-fill-lower {
+  background: var(--secondary-color);
+}
+input[type=range]:focus::-ms-fill-upper {
+  background: var(--secondary-color);
+}
+
+.range {
+  p.center {
+    padding: auto 0.5rem;
+    margin: auto 0.675rem;
+  }
+}
