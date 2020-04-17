@@ -483,7 +483,8 @@ input:focus, textarea:focus, code:focus {
         font-weight: 500;
         content: "✓";
         text-align: center;
-        display: inline-block; }
+        display: inline-block;
+        line-height: 115%; }
   .checkbox label {
     color: var(--app-text);
     font-size: 0.875rem;
