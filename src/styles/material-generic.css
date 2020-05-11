@@ -1394,20 +1394,6 @@ button:active::before, .tools i:active::before {
   z-index: auto; }
   .panel > .panel {
     background-color: white; }
-  .panel button.bottom {
-    position: absolute;
-    left: 45%;
-    bottom: 0.5rem;
-    background-color: #e91e63;
-    z-index: 2;
-    transition: background-color 0.3s; }
-  .panel button.hugTop {
-    position: absolute;
-    top: 0.5rem;
-    left: 45%;
-    background-color: #e91e63;
-    z-index: 2;
-    transition: background-color 0.3s; }
   .panel textarea {
     margin: 0; }
   .panel div {
