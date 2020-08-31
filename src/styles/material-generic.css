@@ -731,14 +731,14 @@ pre > code {
   min-height: 37rem;
   /*height: 125%;*/
   margin-top: 1em;
-  -webkit-transition: all 300ms;
-  transition: all 300ms; }
+  -webkit-transition: transform 300ms;
+  transition: transform 300ms; }
 
 .menu--on {
   left: 0;
   box-shadow: 0.5rem 0.5rem 1.25rem 0 rgba(0, 0, 0, 0.2);
-  -webkit-transition: all 300ms;
-  transition: all 300ms;
+  -webkit-transition: transform 300ms;
+  transition: transform 300ms;
   transform: translateX(0); }
 
 .material-design-hamburger button {
