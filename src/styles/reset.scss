@@ -94,6 +94,10 @@ article, aside, figcaption, figure, footer, header, nav, section, main, input, b
   position: relative;
 }
 
+h1, h2, h3, h4, h5, h6, form, input, button, dialog, aside, ul, ol, dl, dd, dt {
+  position: relative;
+}
+
 /* PARAGRAPHS */
 
 h1, h2, h3, h4 {

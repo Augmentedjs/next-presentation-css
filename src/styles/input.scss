@@ -95,7 +95,7 @@ input:focus, textarea:focus, code:focus {
 /* new style with animated label, requires element with style 'input' to contain  */
 .input {
   position: relative;
-  width: 9.5rem;
+  width: 100%;
   background-color: rgba(0, 0, 0, 0.1);
   border-radius: 0.25rem 0.25rem 0 0;
   height: 2rem;
@@ -161,8 +161,4 @@ input:focus, textarea:focus, code:focus {
   input:focus, input:not(:placeholder-shown) {
     outline: none;
   }
-}
-
-.panel div.select, div.select, .panel div.input, div.input {
-  width: 100%;
 }
