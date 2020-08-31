@@ -283,6 +283,9 @@ input:focus, textarea:focus, code:focus {
   .input input:focus, .input input:not(:placeholder-shown) {
     outline: none; }
 
+.panel div.select, div.select, .panel div.input, div.input {
+  width: 100%; }
+
 .panel div.select, div.select {
   display: block;
   position: relative;
@@ -652,7 +655,8 @@ pre > code {
   -webkit-transition: all 300ms ease-in-out;
   transition: all 300ms ease-in-out;
   padding: 0;
-  z-index: 5; }
+  z-index: 5;
+  width: 2.5rem; }
 
 .menu {
   font-size: 1rem;
@@ -669,6 +673,7 @@ pre > code {
   background-color: rgba(0, 0, 0, 0.5);
   height: 100%;
   left: 0;
+  transform: translateX(0);
   position: fixed;
   top: 0;
   transform: translateZ(0);
@@ -677,7 +682,8 @@ pre > code {
 .menu div {
   margin-left: 0;
   margin-right: 0;
-  padding: 1rem 1.5rem; }
+  padding: 1rem 1.5rem;
+  cursor: pointer; }
   .menu div:hover {
     background-color: #eeeeee; }
   .menu div:first-child {
@@ -719,14 +725,15 @@ pre > code {
   /*top: 0;*/
   transform: translateZ(0);
   /*position: absolute;*/
-  left: -16rem;
+  /*left: -16rem;*/
+  transform: translateX(-16rem);
   width: 16rem;
   display: block;
   min-height: 37rem;
   /*height: 125%;*/
   margin-top: 1em;
-  -webkit-transition: all 300ms;
-  transition: all 300ms; }
+  -webkit-transition: transform 300ms;
+  transition: transform 300ms; }
 
 .menu--on {
   left: 0;
@@ -1159,6 +1166,13 @@ button:active::before, .tools i:active::before {
       font-size: 1.5em;
       line-height: 1.5em; }
 
+.buttonBar {
+  margin: 2rem auto;
+  text-align: right; }
+  .buttonBar button {
+    display: inline-block;
+    margin-left: 1rem; }
+
 /* application header - top bar */
 .header {
   background-color: var(--primary-color);
@@ -1244,7 +1258,7 @@ button:active::before, .tools i:active::before {
   .header h1 {
     font-size: 1.5rem;
     font-weight: 400;
-    margin-left: 3rem;
+    margin-left: 2.5rem;
     left: 0;
     position: absolute;
     top: 0; }
@@ -1694,12 +1708,21 @@ dialog {
 .blur {
   display: block;
   position: fixed;
-  z-index: auto;
+  z-index: 3;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.1); }
+  background-color: rgba(0, 0, 0, 0.25);
+  transition: all 0.25s ease; }
+  .blur dialog {
+    transition: all 0.25s ease;
+    opacity: 1; }
+  .blur.close {
+    opacity: 0; }
+    .blur.close dialog {
+      transform: scale(0.75);
+      opacity: 0; }
 
 .splash {
   position: absolute;

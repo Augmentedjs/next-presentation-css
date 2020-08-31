@@ -357,7 +357,6 @@ button:active::before, .tools i:active::before {
   transition: width .2s ease-out, padding-top .2s ease-out;
 }
 
-
 .inlineButton {
   display: inline-block;
   width: 1em;
@@ -376,5 +375,14 @@ button:active::before, .tools i:active::before {
       font-size: 1.5em;
       line-height: 1.5em;
     }
+  }
+}
+
+.buttonBar {
+  margin: 2rem auto;
+  text-align: right;
+  button {
+    display: inline-block;
+    margin-left: 1rem;
   }
 }

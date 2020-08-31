@@ -162,3 +162,7 @@ input:focus, textarea:focus, code:focus {
     outline: none;
   }
 }
+
+.panel div.select, div.select, .panel div.input, div.input {
+  width: 100%;
+}
