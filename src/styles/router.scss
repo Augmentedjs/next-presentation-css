@@ -1,5 +1,6 @@
 /* router transitions */
 
+/* older version
 .main {
   transition: opacity 1s ease;
 }
@@ -10,4 +11,28 @@
 
 .transition-out {
   opacity: 0;
+}
+*/
+
+.main {
+  /* make the router transition smoother */
+  transition: none;
+  will-change: transform, opacity;
+  > * {
+    transition: opacity 0.25s ease;
+  }
+}
+
+.transition-in {
+  opacity: 1.0;
+  > * {
+    opacity: 1.0;
+  }
+}
+
+.transition-out {
+  opacity: 1.0;
+  > * {
+    opacity: 0;
+  }
 }
