@@ -1,6 +1,6 @@
 {
   "name": "presentation-css",
-  "version": "4.15.0",
+  "version": "4.15.1",
   "description": "The Augmented.js Next - Presentation SASS/CSS Module.",
   "main": "src/styles/material-generic.scss",
   "scripts": {
