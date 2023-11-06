@@ -1569,7 +1569,8 @@ table {
     table.material td input {
       width: 100%;
       border: 0 none;
-      height: 100%;
+      height: auto;
+      padding: 0;
       display: inline-block;
       position: relative;
       background-color: transparent;
@@ -1601,7 +1602,7 @@ table.material td input:focus {
     background-color: rgba(255,255,204,0.85);
 }
 */
-/* pagfination styles */
+/* pagination styles */
 div.paginationControl.material {
   display: block;
   font-size: 0.8rem;
